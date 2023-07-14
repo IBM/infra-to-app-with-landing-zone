@@ -345,7 +345,7 @@
             {
               "direction": "inbound",
               "name": "allow-ibm-tcp-22-inbound-vpc",
-              "source": "10.40.10.0/24",
+              "source": "10.0.0.0/8",
               "destination": "10.10.10.0/24",
               "action": "allow",
               "tcp": {
@@ -357,7 +357,7 @@
               "direction": "outbound",
               "name": "allow-ibm-tcp-22-outbound-vpc",
               "source": "10.10.10.0/24",
-              "destination": "10.40.10.0/24",
+              "destination": "10.0.0.0/8",
               "action": "allow",
               "tcp": {
                 "port_max": 22,
@@ -468,7 +468,7 @@
               "direction": "inbound",
               "name": "allow-ibm-tcp-22-inbound",
               "source": "10.10.10.0/24",
-              "destination": "10.40.10.0/24",
+              "destination": "10.0.0.0/8",
               "action": "allow",
               "tcp": {
                 "port_max": 22,
@@ -478,7 +478,7 @@
             {
               "direction": "outbound",
               "name": "allow-ibm-tcp-22-outbound",
-              "source": "10.40.10.0/24",
+              "source": "10.0.0.0/8",
               "destination": "10.10.10.0/24",
               "action": "allow",
               "tcp": {
@@ -705,7 +705,9 @@
         "ssh-key"
       ],
       "subnet_names": [
-        "vsi-zone-1"
+        "vsi-zone-1",
+        "vsi-zone-2",
+        "vsi-zone-3"
       ],
       "vpc_name": "workload",
       "vsi_per_subnet": 1,

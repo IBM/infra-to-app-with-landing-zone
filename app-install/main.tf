@@ -1,11 +1,20 @@
+data "ibm_is_instances" "insts" {
+  vpc = var.vpc_id
+}
+
+locals {
+  workload_ip_list = flatten([for ins in data.ibm_is_instances.insts.instances :
+          [ins.primary_network_interface[0].primary_ipv4_address]
+        ])
+}
 
 resource "null_resource" "application-install" {
-  count          = length(var.workload_vsi_list)
+  for_each       = toset(local.workload_ip_list)
   connection {
     type         = "ssh"
     user         = "root"
     bastion_host = var.floating_ip_address
-    host         = var.workload_vsi_list[count.index]
+    host         = each.key
     private_key  = var.ssh_private_key
     agent        = false
     timeout      = "15m"
