@@ -30,4 +30,10 @@ variable "ssh_key" {
   type        = string
 }
 
+variable "ssh_private_key" {
+  description = "Private SSH key (RSA format) that is paired with the public ssh key."
+  type        = string
+  sensitive   = true
+}
+
 
