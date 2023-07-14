@@ -2,10 +2,6 @@
 # Landing Zone VSI Pattern
 ##############################################################################
 
-locals {
-  override_json_string = jsondecode(file("${path.root}/override.json"))
-}
-
 module "landing_zone" {
   source           = "git::https://github.com/terraform-ibm-modules/terraform-ibm-landing-zone.git//patterns/vsi?ref=v4.4.4"
   prefix           = var.prefix
