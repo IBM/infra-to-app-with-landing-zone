@@ -11,7 +11,6 @@ variable "ibmcloud_api_key" {
 variable "region" {
   description = "IBM Cloud region where the resources will be created."
   type        = string
-  default     = "eu-gb"
 }
 
 variable "prefix" {
@@ -28,6 +27,12 @@ variable "prefix" {
 variable "ssh_key" {
   description = "Public SSH Key for VSI creation. Must be a valid SSH key that does not already exist in the deployment region."
   type        = string
+}
+
+variable "ssh_private_key" {
+  description = "Private SSH key (RSA format) that is paired with the public ssh key."
+  type        = string
+  sensitive   = true
 }
 
 

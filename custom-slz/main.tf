@@ -8,5 +8,26 @@ module "landing_zone" {
   region           = var.region
   ibmcloud_api_key = var.ibmcloud_api_key
   ssh_public_key   = var.ssh_key
-  override         = true # Important - this is what instruct the landing zone module to use the topology defined in the override.json file
+  override         = true
 }
+
+locals {
+  workload_vsi_ips = flatten([
+       for vsi in module.landing_zone.vsi_list:
+       [vsi.ipv4_address] if endswith(vsi.vpc_name, "workload-vpc")
+  ])
+}
+
+output "vpc_data" {
+  value = module.landing_zone.vpc_data
+}
+
+module "app-install" {
+  source                     = "../app-install"
+  region           = var.region
+  ibmcloud_api_key = var.ibmcloud_api_key
+  ssh_private_key            = var.ssh_private_key
+  floating_ip_address        = module.landing_zone.fip_vsi[0].floating_ip
+  vpc_id                     = [for vpc in module.landing_zone.vpc_data : vpc.vpc_id if endswith(vpc.vpc_name, "workload-vpc")][0]
+}
+
