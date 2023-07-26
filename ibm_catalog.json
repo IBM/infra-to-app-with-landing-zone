@@ -1,0 +1,16 @@
+{
+    "products": [
+        {
+            "name": "secure-website",
+            "label": "Web application for multicloud",
+            "flavors": [
+                {
+                    "label": "IBM Cloud",
+                    "name": "ibm-cloud-example",
+                    "install_type": "fullstack",
+                    "working_directory": "full-stack"
+                }
+            ]
+        }
+    ]
+}
