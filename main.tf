@@ -13,7 +13,7 @@ module "landing_zone" {
 
 module "app-install" {
   depends_on          = [module.landing_zone] # Wait for the full completion of landing zone - this ensures all VSIs are created
-  source              = "../app-install"
+  source              = "./app-install"
   region              = var.region
   ibmcloud_api_key    = var.ibmcloud_api_key
   ssh_private_key     = var.ssh_private_key
