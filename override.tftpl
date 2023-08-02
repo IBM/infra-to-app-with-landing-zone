@@ -6,7 +6,7 @@
       "slz-appid-key"
     ],
     "name": "appid",
-    "resource_group": "techxchange-service-rg",
+    "resource_group": "${prefix}-service-rg",
     "use_appid": false,
     "use_data": false
   },
@@ -14,7 +14,7 @@
     "add_route": false,
     "collector_bucket_name": "atracker-bucket",
     "receive_global_events": true,
-    "resource_group": "techxchange-service-rg"
+    "resource_group": "${prefix}-service-rg"
   },
   "clusters": [],
   "cos": [
@@ -23,7 +23,7 @@
         {
           "endpoint_type": "public",
           "force_delete": true,
-          "kms_key": "techxchange-atracker-key",
+          "kms_key": "${prefix}-atracker-key",
           "name": "atracker-bucket",
           "storage_class": "standard"
         }
@@ -32,7 +32,7 @@
       "name": "atracker-cos",
       "plan": "standard",
       "random_suffix": true,
-      "resource_group": "techxchange-service-rg",
+      "resource_group": "${prefix}-service-rg",
       "use_data": false
     },
     {
@@ -40,14 +40,14 @@
         {
           "endpoint_type": "public",
           "force_delete": true,
-          "kms_key": "techxchange-slz-key",
+          "kms_key": "${prefix}-slz-key",
           "name": "management-bucket",
           "storage_class": "standard"
         },
         {
           "endpoint_type": "public",
           "force_delete": true,
-          "kms_key": "techxchange-slz-key",
+          "kms_key": "${prefix}-slz-key",
           "name": "workload-bucket",
           "storage_class": "standard"
         }
@@ -56,7 +56,7 @@
       "name": "cos",
       "plan": "standard",
       "random_suffix": true,
-      "resource_group": "techxchange-service-rg",
+      "resource_group": "${prefix}-service-rg",
       "use_data": false
     }
   ],
@@ -90,8 +90,8 @@
   "key_management": {
     "keys": [
       {
-        "key_ring": "techxchange-slz-ring",
-        "name": "techxchange-slz-key",
+        "key_ring": "${prefix}-slz-ring",
+        "name": "${prefix}-slz-key",
         "policies": {
           "rotation": {
             "interval_month": 12
@@ -100,8 +100,8 @@
         "root_key": true
       },
       {
-        "key_ring": "techxchange-slz-ring",
-        "name": "techxchange-atracker-key",
+        "key_ring": "${prefix}-slz-ring",
+        "name": "${prefix}-atracker-key",
         "policies": {
           "rotation": {
             "interval_month": 12
@@ -110,8 +110,8 @@
         "root_key": true
       },
       {
-        "key_ring": "techxchange-slz-ring",
-        "name": "techxchange-vsi-volume-key",
+        "key_ring": "${prefix}-slz-ring",
+        "name": "${prefix}-vsi-volume-key",
         "policies": {
           "rotation": {
             "interval_month": 12
@@ -120,23 +120,23 @@
         "root_key": true
       }
     ],
-    "name": "techxchange-slz-kms",
-    "resource_group": "techxchange-service-rg",
+    "name": "${prefix}-slz-kms",
+    "resource_group": "${prefix}-service-rg",
     "use_hs_crypto": false
   },
   "network_cidr": "10.0.0.0/8",
   "resource_groups": [
     {
       "create": true,
-      "name": "techxchange-service-rg"
+      "name": "${prefix}-service-rg"
     },
     {
       "create": true,
-      "name": "techxchange-management-rg"
+      "name": "${prefix}-management-rg"
     },
     {
       "create": true,
-      "name": "techxchange-workload-rg"
+      "name": "${prefix}-workload-rg"
     }
   ],
   "secrets_manager": {
@@ -148,7 +148,7 @@
   "security_groups": [
     {
       "name": "management-vpe-sg",
-      "resource_group": "techxchange-management-rg",
+      "resource_group": "${prefix}-management-rg",
       "rules": [
         {
           "direction": "inbound",
@@ -209,7 +209,7 @@
     },
     {
       "name": "workload-vpe-sg",
-      "resource_group": "techxchange-workload-rg",
+      "resource_group": "${prefix}-workload-rg",
       "rules": [
         {
           "direction": "inbound",
@@ -295,10 +295,10 @@
     "management",
     "workload"
   ],
-  "transit_gateway_resource_group": "techxchange-service-rg",
+  "transit_gateway_resource_group": "${prefix}-service-rg",
   "virtual_private_endpoints": [
     {
-      "resource_group": "techxchange-service-rg",
+      "resource_group": "${prefix}-service-rg",
       "service_name": "cos",
       "service_type": "cloud-object-storage",
       "vpcs": [
@@ -390,7 +390,7 @@
         }
       ],
       "prefix": "management",
-      "resource_group": "techxchange-management-rg",
+      "resource_group": "${prefix}-management-rg",
       "subnets": {
         "zone-1": [
           {
@@ -512,7 +512,7 @@
         }
       ],
       "prefix": "workload",
-      "resource_group": "techxchange-workload-rg",
+      "resource_group": "${prefix}-workload-rg",
       "subnets": {
         "zone-1": [
           {
@@ -568,20 +568,20 @@
     {
       "connections": [],
       "name": "management-gateway",
-      "resource_group": "techxchange-management-rg",
+      "resource_group": "${prefix}-management-rg",
       "subnet_name": "vpn-zone-1",
       "vpc_name": "management"
     }
   ],
   "vsi": [
     {
-      "boot_volume_encryption_key_name": "techxchange-vsi-volume-key",
+      "boot_volume_encryption_key_name": "${prefix}-vsi-volume-key",
       "image_name": "ibm-ubuntu-22-04-2-minimal-amd64-1",
       "machine_type": "cx2-4x8",
       "name": "management-server",
-      "resource_group": "techxchange-management-rg",
+      "resource_group": "${prefix}-management-rg",
       "security_group": {
-        "name": "techxchange-management",
+        "name": "${prefix}-management",
         "rules": [
           {
             "direction": "inbound",
@@ -648,13 +648,13 @@
       "enable_floating_ip": true
     },
     {
-      "boot_volume_encryption_key_name": "techxchange-vsi-volume-key",
+      "boot_volume_encryption_key_name": "${prefix}-vsi-volume-key",
       "image_name": "ibm-ubuntu-22-04-2-minimal-amd64-1",
       "machine_type": "cx2-4x8",
       "name": "workload-server",
-      "resource_group": "techxchange-workload-rg",
+      "resource_group": "${prefix}-workload-rg",
       "security_group": {
-        "name": "techxchange-workload",
+        "name": "${prefix}-workload",
         "rules": [
           {
             "direction": "inbound",
