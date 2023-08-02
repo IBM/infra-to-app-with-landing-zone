@@ -10,7 +10,7 @@ module "landing_zone" {
   region           = var.region
   ibmcloud_api_key = var.ibmcloud_api_key
   ssh_public_key   = var.ssh_key
-  override_json_string = templatefile("./override.tftpl", { prefix = var.prefix})
+  override_json_string = templatefile("./override.tftpl", { prefix = var.prefix })
 }
 
 module "app-install" {
