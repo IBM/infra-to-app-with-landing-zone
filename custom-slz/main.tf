@@ -8,5 +8,5 @@ module "landing_zone" {
   region           = var.region
   ibmcloud_api_key = var.ibmcloud_api_key
   ssh_public_key   = var.ssh_key
-  override         = true  # This line instructs the module to use the topology located in the file override.json
+  override_json_string = templatefile("./override.tftpl", { prefix = var.prefix })
 }
