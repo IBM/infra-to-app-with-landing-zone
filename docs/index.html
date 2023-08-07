@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no"
+    />
+    <title>Deploy your first application to IBM Cloud in 3 clicks | IBM TechXchange 2023</title>
+    <!-- <link rel="stylesheet" href="https://unpkg.com/docsify-themeable/dist/css/theme-simple.css" /> -->
+    <link rel="stylesheet" href="css/theme-simple.css" />
+
+    <!-- 3. Custom Theme Properties -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        /* Reduce the font size */
+        /* --base-font-size: 14px; */
+        --base-font-family     : "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+
+        /* Change the theme color hue (0-360) */
+        /* --theme-hue: 325; */
+        --cover-blockquote-font-size         : var(--font-size-xxl);
+
+        --cover-max-width                    : 80%;
+        --cover-background-color             : var(--base-background-color);
+        --cover-background-image             : ;
+
+        --sidebar-width                      : 20rem;
+        --content-max-width                  : 85em;
+      }
+
+      .medium-zoom-image {
+        display: block;
+        padding: 20px;
+      }
+    </style>
+
+    <link rel="shortcut icon" type="image/jpg" href="images/favicon.svg"/>
+  </head>
+
+  <body>
+    <div id="app"></div>
+
+    <script>
+      // 4. Docsify Configuration
+      window.$docsify = {
+        name: "Seamless App Deployment with IBM Cloud's Secure Landing Zone",
+        // repo: "https://github.com/IBM-Cloud",
+        coverpage: "cover.md",
+        homepage: "README.md",
+        loadSidebar: "sidebar.md",
+        auto2top: true,
+        maxLevel: 3,
+        subMaxLevel: 2,
+
+        // 5. docsify-themeable
+        themeable: {
+          // readyTransition : false,
+          // responsiveTables: false
+        },
+
+        requestHeaders: {
+          'cache-control': 'max-age=0',
+        },
+      };
+    </script>
+
+    <!-- <script src="https://unpkg.com/docsify/lib/docsify.min.js"></script> -->
+    <script src="js/docsify.min.js"></script>
+
+    <!-- <script src="https://unpkg.com/docsify-themeable"></script> -->
+    <script src="js/docsify-themeable.js"></script>
+
+    <!-- <script src="//unpkg.com/docsify/lib/plugins/search.js"></script> -->
+    <script src="js/search.js"></script>
+
+    <!-- <script src="//unpkg.com/docsify/lib/plugins/zoom-image.min.js"></script> -->
+    <script src="js/zoom-image.min.js"></script>
+
+    <!-- <script src="//unpkg.com/docsify-pagination/dist/docsify-pagination.min.js"></script> -->
+    <script src="js/docsify-pagination.min.js"></script>
+  </body>
+</html>
