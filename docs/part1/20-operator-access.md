@@ -30,6 +30,6 @@ Perform the following actions to provide operator access to a VSI in the managem
 8. Create the following ACL inbound rule:
    ![SSH ACL Inbound rule](../images/part1-20-ssh-acl-inbound.png)
 9. Create the folloiwng ACL outbound rule:
-   ![SSH ACL Inbound rule](../images/part1-20-ssh-acl-outbound.png)
+   ![SSH ACL Outbound rule](../images/part1-20-ssh-acl-outbound.png)
 10. You will now be able to access the Floating IP address that you provisioned in a prior step. On your workstation, issue the following command from a terminal
     `ssh -i key root@<Floating IP of Virtual server instance>`
