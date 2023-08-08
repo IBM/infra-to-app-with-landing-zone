@@ -16,5 +16,3 @@ The objective of this lab is split into two distinct parts. The first part is bu
   - An Apache server will be deployed in a secure VSI workload VPC
   - The web application will be exposed for outside access.
 - Part 2 shows how to automate the manual steps in Part 1, and then, how to package, and share the automation as a “Deployable Architecture” with other user through a private IBM Cloud Catalog
-
-Before we go onto practical steps, the following sections introduces some of the necessary background and context to understand the general principles of this lab.
