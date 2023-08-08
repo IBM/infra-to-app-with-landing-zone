@@ -7,3 +7,5 @@ Whilst the framework was initially based on the needs of financial institutions,
 [Getting started with IBM Cloud for Financial Services](https://cloud.ibm.com/docs/framework-financial-services?topic=framework-financial-services-about)
 
 The framework provides secure [VPC reference architectures](https://cloud.ibm.com/docs/framework-financial-services?topic=framework-financial-services-vpc-architecture-about) meeting with a number of regulatory controls.
+
+![VPC reference architecture](../images/about-fs-cloud.png)
