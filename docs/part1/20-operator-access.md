@@ -23,12 +23,13 @@ Perform the following actions to provide operator access to a VSI in the managem
 4. In the [Security Groups for VPC](https://cloud.ibm.com/vpc-ext/network/securityGroups), click the one label _&lt;initials&gt;-management_
 5. Go to the Rules section and allow port 22 for inbound by clicking **Create** in the _Inbound rules_ section (Note: Security groups are stateful so you don’t need to add a corresponding outbound rule)
 
-- Protocol: TCP
-- Port min: 22
-- Port max: 22
-- Source type: Any
-
 ![Allow SSH in Security group](../images/part1-20-ssh-sg.png)
 
 6. Click **Create**
 7. In the [Access control lists for VPC](https://cloud.ibm.com/vpc-ext/network/acl), click the one labeled _&lt;initials&gt;-management-acl_
+8. Create the following ACL inbound rule:
+   ![SSH ACL Inbound rule](../images/part1-20-ssh-acl-inbound.png)
+9. Create the folloiwng ACL outbound rule:
+   ![SSH ACL Inbound rule](../images/part1-20-ssh-acl-outbound.png)
+10. You will now be able to access the Floating IP address that you provisioned in a prior step. On your workstation, issue the following command from a terminal
+    `ssh -i key root@&lt;Floating IP of Virtual server instance&gt;`
