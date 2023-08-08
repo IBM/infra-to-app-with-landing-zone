@@ -22,12 +22,12 @@ In this section, you will expose the web application to the internet so you can 
     - Under the _Security Group_ section, unselect all except the one labeled &lt;initials&gt;-workload
     - Click **Create load balancer**
 3.  Allow access to the load balancer by adding the following inbound rule to the [security group](https://cloud.ibm.com/vpc-ext/network/securityGroups) called &lt;initials&gt;-workload that the load balancer is attached.
-    ![Inbound security group rule](../images/part1-40-sg.png)
+    ![Inbound security group rule](../images/part-1/40-sg.png)
 4.  Allow internet access to the load balancer by adding the following rules to the [Access control list](https://cloud.ibm.com/vpc-ext/network/acl) for the ACL &lt;initials&gt;-workload-acl.
     - Create an inbound rule
-      ![ACL inbound rule](../images/part1-40-acl-inbound.png)
+      ![ACL inbound rule](../images/part-1/40-acl-inbound.png)
     - Create an outbound rule
-      ![ACL outbound rule](../images/part1-40-acl-outbound.png)
+      ![ACL outbound rule](../images/part-1/40-acl-outbound.png)
 5.  You web application is exposed:
     - Retrieve the FQDN of your Load balancer
       - [Access the Load Balancer list](https://cloud.ibm.com/vpc-ext/network/loadBalancers) and click your provisioned load balancer

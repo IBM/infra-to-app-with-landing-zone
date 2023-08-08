@@ -7,7 +7,7 @@
 3. On the Overview page, make sure the following is selected:\
    a. Product version: 4.4.7\
    b. Variation: Standard
-   ![Overview page](../images/part1-10-overview-page.png)
+   ![Overview page](../images/part-1/10-overview-page.png)
 4. Click **Review deployment options**
 5. Click **Add to project**
 6. Under _Create New_, input a name that you wish to provide to the project
@@ -19,7 +19,7 @@
    a. ssh_public_key: The value of lab-key.pub that was generated from step 1\
    b. Region: Select a region that you wish to deploy in\
    c. Prefix: your initials
-   ![Configuration](../images/part1-10-configuration.png)
+   ![Configuration](../images/part-1/10-configuration.png)
 
 10. Under Configure-> Optional, set the following:\
     a. add_atracker_route: false
@@ -27,7 +27,7 @@
 12. Click **Validate**
 13. The project will go through different steps in validation. When it completes, the validation might fail due to a rule within the Security and compliance section. In the _Approval not recommended_ section, add a comment and click **Override and approve** to start provisioning.
 
-![Validation](../images/part1-10-validation.png)
+![Validation](../images/part-1/10-validation.png)
 
 14. Click **Deploy**
 
