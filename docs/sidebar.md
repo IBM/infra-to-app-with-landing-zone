@@ -5,3 +5,4 @@
   - [IBM Cloud Projects](./about/40-projects.md)
 - [Part 1](./part1/00-objectives.md)
   - [Deploy Landing Zone VSI pattern](./part1/10-project.md)
+  - [Operator Access](./part1/20-operator-access.md)
