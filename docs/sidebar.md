@@ -3,3 +3,5 @@
   - [VPC Landing Zone](./about/20-vpc-landing-zone.md)
   - [Deployable Architectures](./about/30-deployable-arch)
   - [IBM Cloud Projects](./about/40-projects.md)
+- [Part 1](./part1/00-objectives.md)
+  - [Deploy Landing Zone VSI pattern](./part1/10-project.md)
