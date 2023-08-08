@@ -15,4 +15,4 @@ That SRE team can group configurations, and thus centralize the governance, for 
 Beyond the core configuration grouping capability, IBM Cloud Projects is designed with an IaC and a compliance-first approach. Projects also seemingly integrate with IBM Cloud Schematics to deploy, update, and manage the resources created by the IaC automation.
 Each project also includes tools to scan for potentially harmful resource changes, compliance, security, and cost, as well as tracking configuration versioning and governance.
 
-![IBM Cloud Projects](../about/40-projects.md)
+![IBM Cloud Projects](../images/about-projects.png)
