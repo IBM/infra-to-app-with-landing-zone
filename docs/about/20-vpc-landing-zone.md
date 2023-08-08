@@ -21,5 +21,3 @@ VPC Landing Zone comes with four fully functional patterns that are strictly fol
 - VPC with VSIs and OpenShift (“mixed”) pattern.
 
 Each of the patterns can be used as a starting point to create your own customizable VPC-based topology that matches your enterprise or customer exact needs.
-
-![VPC reference architecture](../images/about-fs-cloud.png)

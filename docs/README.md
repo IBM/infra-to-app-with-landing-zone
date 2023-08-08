@@ -10,7 +10,7 @@ In this hands-on lab, you will learn to:
 
 The objective of this lab is split into two distinct parts. The first part is built as a stepping stone for the second part.
 
-- Part 1 shows how the end-to-end steps to deploy a sample web application on top of a secure VPC-topology in your own account.
+- Part 1 shows the end-to-end steps to deploy a sample web application on top of a secure VPC-topology in your own account.
   - The secure VPC-based topology will be deployed using the Landing Zone Deployable Architecture.
   - Operator access will be provided through a manually deployed jump box VSI
   - An Apache server will be deployed in a secure VSI workload VPC
