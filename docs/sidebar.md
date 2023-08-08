@@ -6,3 +6,5 @@
 - [Part 1](./part1/00-objectives.md)
   - [Deploy Landing Zone VSI pattern](./part1/10-project.md)
   - [Operator Access](./part1/20-operator-access.md)
+  - [Install Apache server](./part1/30-apache-server.md)
+  - [Expose a web application](./part1/40-expose-web-app.md)
