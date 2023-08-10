@@ -2,7 +2,7 @@
 
 In this section of the lab you will learn to provision the VSI on VPC landing zone Deployable Architecture and to provide access to a VSI within the management VPC through the IBM Cloud console to deploy an Apache server.
 
-Lab Perquisites
+Lab Prerequisites :white_check_mark:
 
 - IBM Account (ibmid to gain access to console)
 - API Key
