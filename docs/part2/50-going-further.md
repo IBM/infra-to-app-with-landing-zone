@@ -39,11 +39,8 @@ configuration is tested and maintained by IBM.
 
 ## Best practices to implement deployable architectures
 
-\[ TODO \]
-
-Terraform module best practices:
-<https://terraform-ibm-modules.github.io/documentation/#/implementation-guidelines>
+Recommendations and best practices to implement quality terraform modules is available on the [terraform-ibm-modules](https://terraform-ibm-modules.github.io/documentation/#/implementation-guidelines) organization. A module template is also available [here](https://github.com/terraform-ibm-modules/terraform-ibm-module-template) that can be used to quickly get started with best practices.
 
 ## Making a Deployable Architecture available in the IBM Cloud public catalog.
 
-\[ TODO \]
+If you are a partner or vendor interested in making available a Deployable Architecture to all users in the Public IBM Cloud Catalog - see the following [details](https://cloud.ibm.com/docs/sell?topic=sell-selling-clouds). 

@@ -1,7 +1,9 @@
 <img src="header.jpg">
 
-> Seamless App Deployment with<br/>
-> IBM Cloud's Secure Landing Zone
+Seamless Deployment: From Provisioning to Runtime with IBM Cloud's Landing Zone Deployable Architecture
+
+> Seamless Deployment: From Provisioning to Runtime<br/>
+> with IBM Cloud's Landing Zone
 
 _Session 2448_
 

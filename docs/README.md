@@ -17,17 +17,14 @@ This lab also introduces some concepts and background prior to diving onto the h
 The objective of this lab is split into two distinct parts.
 
 - [Part 1](./part1/00-objectives) shows the end-to-end steps to:
-  1. Use the [Landing Zone](https://cloud.ibm.com/docs/secure-infrastructure-vpc?topic=secure-infrastructure-vpc-overview) Deployable Architecture to automatically deploy a secure VPC-based topology in your account
-  2. Manually customize the deployed infrastructure to:
-    
-    a. Provide operator access through a "jump box" VSI
-
-    b. Install an Apache server in one of the workload VPC
-
-    c. Expose the web application served by the Apache service through a public VPC LoadBalancer
+  1. Use the [Landing Zone Deployable Architecture](https://cloud.ibm.com/docs/secure-infrastructure-vpc?topic=secure-infrastructure-vpc-overview) to automatically deploy a secure VPC-based topology in your account.
+  2. Manually customize the deployed infrastructure to:    
+    a. Provide operator access through a "jump box" VSI\
+    b. Install an Apache server in one of the workload VPC that serves the web pages\
+    c. Expose the web pages served by the Apache server through a public VPC LoadBalancer
 
 - [Part 2](./part2/00-objectives) shows how to:
   1. Automate the manual steps in Part 1
-  2. How to package, and share the automation as a **Deployable Architecture** through a private IBM Cloud Catalog to facilitate discoverability and consumption of your automation by other users.
+  2. Package, and share the automation as a **Deployable Architecture** through a private IBM Cloud Catalog to facilitate discoverability and consumption of your automation by other users.
 
  The first part is designed as a stepping stone for the second part.
