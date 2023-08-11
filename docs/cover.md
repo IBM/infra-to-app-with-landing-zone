@@ -1,7 +1,5 @@
 <img src="header.jpg">
 
-Seamless Deployment: From Provisioning to Runtime with IBM Cloud's Landing Zone Deployable Architecture
-
 > Seamless Deployment: From Provisioning to Runtime<br/>
 > with IBM Cloud's Landing Zone
 
