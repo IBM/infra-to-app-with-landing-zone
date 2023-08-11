@@ -35,7 +35,7 @@ There are three ways to produce a json file that codify the desired
 topology -- ranked by order of complexity:
 1.  The first way is to use the Graphical User Inferface tool provided
     at
-    <https://slz-gui-ce-toolchain.uq6916rl3tl.us-east.codeengine.appdomain.cloud/>
+    <https://slz-gui.15z7evpngrsf.us-south.codeengine.appdomain.cloud/>
     to guide your through a step-by-step documented wizard leading to
     the produce a valid JSON file. The GUI tool also allows you to
     import an existing json file and start customizations from there.
