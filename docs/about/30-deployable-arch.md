@@ -12,7 +12,7 @@ In other words, it is possible for an end-user to execute the terraform automati
 
 ![Deployable Architecture console](../images/about-deployable-arch.png)
 
-The Landing Zone terraform module and patterns described just above have a corresponding [Deployable Architecture](https://cloud.ibm.com/docs/secure-infrastructure-vpc?topic=secure-infrastructure-vpc-overview) in IBM Cloud. In this lab, the Secure Landing Zone is consumed through the Deployable Architecture experience for ease of use, rather than using the terraform CLI against the open-source github version.
+The Landing Zone terraform module and patterns described in [🌍 VPC Landing Zone](./about/20-vpc-landing-zone.md) have a corresponding [Deployable Architecture](https://cloud.ibm.com/docs/secure-infrastructure-vpc?topic=secure-infrastructure-vpc-overview) in IBM Cloud. In this lab, the Secure Landing Zone is consumed through the Deployable Architecture experience for ease of use, rather than using the terraform CLI against the open-source github version.
 
 IBM-maintained Deployable Architectures, like the Landing Zone Deployable Architecture:
 

@@ -10,7 +10,7 @@ As a concrete example, let’s imagine the scenario of a SRE team responsible fo
 2. A staging environment – as close as possible to the production environment
 3. 2 production environments: one in America and another one in Europe.
 
-That SRE team can group configurations, and thus centralize the governance, for the 4 different environments in one single Project.
+That SRE team can group configurations, and thus centralize the governance and supervision, for the four different environments in one single Project.
 
 Beyond the core configuration grouping capability, IBM Cloud Projects is designed with an IaC and a compliance-first approach. Projects also seemingly integrate with IBM Cloud Schematics to deploy, update, and manage the resources created by the IaC automation.
 Each project also includes tools to scan for potentially harmful resource changes, compliance, security, and cost, as well as tracking configuration versioning and governance.

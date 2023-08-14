@@ -1,7 +1,9 @@
 # Deploying Landing Zone VSI pattern through IBM Cloud Project
 
 1. Create an ssh-key via the command:\
-   `ssh-keygen -t rsa -b 4096 -N '' -f ./lab-key`\
+   ```
+   ssh-keygen -t rsa -b 4096 -N '' -f ./lab-key
+   ```
    This command generates two files in the current directory: `lab-key` (the private key) and `lab-key.pub` (the public key).
 2. Access the [VSI on VPC landing zone Deployable Architecture](https://cloud.ibm.com/catalog/architecture/deploy-arch-ibm-slz-vsi-ef663980-4c71-4fac-af4f-4a510a9bcf68-global?catalog_query=aHR0cHM6Ly9jbG91ZC5pYm0uY29tL2NhdGFsb2cjcmVmZXJlbmNlX2FyY2hpdGVjdHVyZQ%3D%3D)
 3. On the Overview page, make sure the following is selected:\
