@@ -18,12 +18,13 @@ We will then manually customize the deployed infrastructure to:
 - An IBM Cloud Pay-As-You-Go or Subscription account.
 :information_source: **Note**:  Participants in the TechXchange classroom will be provided with credentials to access an IBM Cloud account for the duration of the lab.
 - An IBMId
-- API Key
+- API Key with the following permissions...
 
 A development machine with the following software:
 - [Terraform](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli)
 - Text editor of your choice
 - Web browser
 - Tools to generate SSH key. Linux and Mac comes with ssh-keygen. [PuTTYgen](https://www.ssh.com/academy/ssh/putty/windows/puttygen) can be used on Windows. See [Generating an external SSH key](https://cloud.ibm.com/docs/vpc?topic=vpc-ssh-keys&interface=ui#generating-ssh-keys)
+- Optional: [IBM Cloud CLI](https://cloud.ibm.com/docs/cli?topic=cli-getting-started)
 
 :information_source: **Note**:  Participants in the TechXchange classroom will be provided with a development VM with pre-installed software.
