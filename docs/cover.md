@@ -1,7 +1,7 @@
 <img src="header.jpg">
 
 > Seamless Deployment: From Provisioning to Runtime<br/>
-> with IBM Cloud's Landing Zone
+> with IBM Cloud VPC landing zone
 
 _Session 2448_
 
