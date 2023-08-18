@@ -1,40 +1,53 @@
 # Providing operator access to the VPC landing zone
 
-## Introduction
+## Overview of operator access
 
-By default, network access to the VPC landing zone topology is locked down for security compliance reasons. In this section, you will open up the necessary access for an operator to access the VPC environment, including deploying application on the VSIs located in the workload VPC.
+By default, network access to the VPC landing zone topology is locked down for security compliance reasons. In this part of the lab, you open the necessary access for an operator to access the VPC environment, including deploying application on the VSIs located in the workload VPC.
 
-Operator access is provided through the _Management VPC_. There are multiple ways to give operator access to the VPC landing zone, with varying level of security, compliance, and ease of enablement:
+You give operator access through the _Management VPC_. You have several options to give operator access, with varying level of security, compliance, and ease of enablement.
 
 - Exposing a VSI in the management VPC as a ‘jump-box’ by assigning a public floating IP
 - Deploying a client-to-site VPN solution in the management VPC
 - Deploying a site-to-site VPN solution in the management VPC
 - Deploying a certified bastion solution, such as Gravitational Teleport in the management VPC.
 
-This part of the lab shows how to expose one of the VSI in the management VPC as a 'jump-box', as this is one of the simplest way to proceed, albeit not being strongly secure. The [Going Further](./part1/50-going-further) section below provides links to some of the other ways to provide operator access.
+In this lab, you expose one of the VSIs in the management VPC as a 'jump-box'. This method is one of the simplest ways to proceed, although it is not overly secure. The [Going further](./part1/50-going-further) section later in the lab provides links to some of the other ways that you can provide operator access.
 
 ## Steps
 
-Perform the following actions to enable public ssh access to one of the VSI in the management VPC. This VSI will be the unique operator entry point ('jump-box') to the landing zone VPC topology.
+Complete the following steps to enable public SSH access to one of the VSI in the management VPC. This VSI is the unique operator entry point ('jump-box') to the landing zone VPC topology.
 
-1. Access the [Virtual server instances for VPC list](https://cloud.ibm.com/vpc-ext/compute/vs)
-2. Verify that the region is set to the region you provisioned your resources and click the VSI labeled _&lt;initials&gt;-management-server-1_
-3. Add a Floating IP address by clicking the pencil icon in the Network Interface section and reserve a new floating IP
-   ![Pencil icon](../images/part-1/20-network-int-pencil.png)
+1. Access the [Virtual server instances for VPC list](https://cloud.ibm.com/vpc-ext/compute/vs).
+2. Verify that the region is set to the region you provisioned your resources and click the VSI labeled `<your_initials>-management-server-1`.
+3. Add a floating IP address by clicking the pencil icon in the Network Interface section. Reserve a new floating IP address.
 
-![Floating IP](../images/part-1/20-floating-ip.png)
+    ![Pencil icon](../images/part-1/20-network-int-pencil.png)
 
-4. Take note of the public Floating IP. This IP will be used in a subsequent step.
-5. In the [Security Groups for VPC](https://cloud.ibm.com/vpc-ext/network/securityGroups), click the one labelled _&lt;initials&gt;-management_
-6. Go to the Rules section and allow port 22 for inbound by clicking **Create** in the _Inbound rules_ section (Note: Security groups are stateful so you don’t need to add a corresponding outbound rule)
+    :exclamation: **Important**: Take note of the public floating IP address. You need it later.
 
-![Allow SSH in Security group](../images/part-1/20-ssh-sg.png)
+    ![Floating IP address](../images/part-1/20-floating-ip.png)
 
-7. Click **Create**
-8. In the [Access control lists for VPC](https://cloud.ibm.com/vpc-ext/network/acl), click the one labeled _&lt;initials&gt;-management-acl_
+5. In the [Security Groups for VPC](https://cloud.ibm.com/vpc-ext/network/securityGroups), click the one labeled `<your_initials>-management`.
+6. Go to the Rules section and allow port 22 for inbound by clicking **Create** in the _Inbound rules_ section.
+
+    :information_source: **Tip**: Security groups are stateful so you don’t need to add a corresponding outbound rule.
+
+    ![Allow SSH in Security group](../images/part-1/20-ssh-sg.png)
+
+7. Click **Create**.
+8. In the [Access control lists for VPC](https://cloud.ibm.com/vpc-ext/network/acl), click the one labeled `<your_initials>-management-acl`.
 9. Create the following ACL inbound rule:
-   ![SSH ACL Inbound rule](../images/part-1/20-ssh-acl-inbound.png)
-10. Create the folloiwng ACL outbound rule:
-   ![SSH ACL Outbound rule](../images/part-1/20-ssh-acl-outbound.png)
-11. You will now be able to access the 'jump-box' through the public Floating IP address that you provisioned in a prior step. On your workstation, issue the following command from a terminal\
-    `ssh -i ./lab-key root@<Floating IP of Virtual server instance>`
+
+    ![SSH ACL Inbound rule](../images/part-1/20-ssh-acl-inbound.png)
+
+10. Create the following ACL outbound rule:
+
+    ![SSH ACL Outbound rule](../images/part-1/20-ssh-acl-outbound.png)
+
+11. You can now access the 'jump-box' through the public floating IP address that you provisioned earlier. On your computer, issue the following command from the terminal or command window:
+
+    ```sh
+    ssh -i ./lab-key root@<Floating IP of Virtual server instance>
+    ```
+
+    Replace \<Floating IP of Virtual server instance> with the address that you reserved earlier.
