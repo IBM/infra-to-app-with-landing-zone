@@ -32,15 +32,17 @@ The end result is a **secure webapp** tile in the IBM Cloud Catalog, that end-us
 
     c.  Repository type: **Public repository** 
 
-    d.  Source URL: `https://github.com/IBM/infra-to-app-with-landing-zone/releases/tag/1.0.0`.
+    d.  Source URL: `https://github.com/IBM/infra-to-app-with-landing-zone/releases/tag/1.0.0`.\
     :information_source:  **Note** This URL is the direct link to the tar.gz asset file located in the [GitHub release page](https://github.com/IBM/infra-to-app-with-landing-zone/releases/tag/1.0.0). 
 
-    e.  Variation: **Standard**. 
+    e.  Variation: **Standard**. \
     :information_source:  **Note**: a Deployable Architecture may have multiple variations the user may choose from. For example, the VSI landing zone deployable architecture has got two variations: "quick start" and "standard". In this lab, our deployable architecture has got only one variation. It is a good practice to name this variation "Standard" - but you are free to input any name in this field. 
 
-    f.  Software Version: **1.0.0**. :information_source: **Note**: this is the version shown in the tile to the end-users in the catalog tile. It can be any string following the [semantic versioning conventions](https://semver.org/) and does not necessarily need to match the version in your source control management system. 
+    f.  Software Version: **1.0.0**. \
+    :information_source: **Note**: this is the version shown in the tile to the end-users in the catalog tile. It can be any string following the [semantic versioning conventions](https://semver.org/) and does not necessarily need to match the version in your source control management system. 
 
-    g.  Category: **Enterprise applications**. :information_source: **Note**: You may select a category that closely matches your deployable rchitecture. The catalog can be filtered by category. 
+    g.  Category: **Enterprise applications**. \
+    :information_source: **Note**: You may select a category that closely matches your deployable rchitecture. The catalog can be filtered by category. 
 
     h.  Click **Add product**
 

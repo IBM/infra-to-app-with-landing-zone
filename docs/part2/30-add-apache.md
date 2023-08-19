@@ -10,10 +10,10 @@ In order to implement this automation, we leverage the native terraform
 remote resource and invokes a script on that machine.
 
 In this step, we configure the remote-exec provisioner to run a script
-that installs Apache server on a worker VSI. The remote-exec provisioner
+that installs Apache server all VSIs in the workload VPC ("worker VSIs"). The remote-exec provisioner
 is configured to access the worker nodes through our management jump box
-that is publicly exposed. The same private ssh key is used in this
-example to connect to the jump box and to the worker vsis.
+that is publicly exposed through a floating IP. The same private ssh key is used in this
+example to connect to the jump box and to the worker VSIs.
 
 ![](../images/part-2/media/image21.png)
 
