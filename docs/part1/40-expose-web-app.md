@@ -24,16 +24,16 @@ In this part of the lab, you expose the web pages to the internet through a VPC 
     - Click **Create load balancer**.
 1.  Allow access to the load balancer by adding the following inbound rule to the [security group](https://cloud.ibm.com/vpc-ext/network/securityGroups) called `<your_initials>-workload` that the load balancer is attached.
 
-      ![Inbound security group rule](../images/part-1/40-sg.png)
+      ![Inbound security group rule](../images/part-1/40-sg.png ':size=60%')
 
 1. Allow internet access to the load balancer by adding the following rules to the [Access control list](https://cloud.ibm.com/vpc-ext/network/acl) for the ACL `<your_initials>-workload-acl`.
     - Create an inbound rule
 
-        ![ACL inbound rule](../images/part-1/40-acl-inbound.png)
+        ![ACL inbound rule](../images/part-1/40-acl-inbound.png ':size=60%')
 
     - Create an outbound rule
 
-        ![ACL outbound rule](../images/part-1/40-acl-outbound.png)
+        ![ACL outbound rule](../images/part-1/40-acl-outbound.png ':size=60%')
 
     :information_source: **Tip**: It can take several minutes for your load balancer to provision. Wait until the status is set to `Active` in [Load balancers for VPC](https://cloud.ibm.com/vpc-ext/network/loadBalancers). You might need to refresh the page periodically.
 
