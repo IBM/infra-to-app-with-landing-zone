@@ -23,8 +23,8 @@
 1. Add the deployable architecture to a project:
 
     1. Access the [VSI on VPC landing zone Deployable Architecture](https://cloud.ibm.com/catalog/architecture/deploy-arch-ibm-slz-vsi-ef663980-4c71-4fac-af4f-4a510a9bcf68-global?catalog_query=aHR0cHM6Ly9jbG91ZC5pYm0uY29tL2NhdGFsb2cjcmVmZXJlbmNlX2FyY2hpdGVjdHVyZQ%3D%3D) in IBM Cloud.
-    1. On the VSI on VPC landing zone details page, make sure that the following settings are selected:
-        a. Product version: **Select the latest** (`4.4.7`` at the time of writing).
+    1. On the VSI on VPC landing zone details page, make sure that the following settings are selected:\
+        a. Product version: **Select the latest** (`4.4.7` at the time of writing).\
         b. Variation: `Standard`
 
         ![Details page](../images/part-1/10-overview-page.png)
@@ -35,17 +35,17 @@
     1. Click **Add** on the lower right.
 
 1. Configure the project
-    1. In the **Configure** > **Security** section, specify the following information:
+    1. In the **Configure** > **Security** section, specify the following information: \
       a. Authentication: Clear **Use a secret** and paste in your IBM Cloud API key.
 
-    1. In the **Configure** > **Required** section, specify the following settings:
-        a. `ssh_public_key`: The value of the `lab-key.pub` file that you generated in step 1.
-        b. `region`: The region that you want to deploy in.
+    1. In the **Configure** > **Required** section, specify the following settings:\
+        a. `ssh_public_key`: The value of the `lab-key.pub` file that you generated in step 1.\
+        b. `region`: The region that you want to deploy in. \
         c. `prefix`: Your initials.
 
         ![Configuration](../images/part-1/10-configuration.png)
 
-    1. In the **Configure** > **Optional**, set the following options:
+    1. In the **Configure** > **Optional**, set the following options:\
         a. `add_atracker_route`: `false`.
     1. Click **Save**.
 

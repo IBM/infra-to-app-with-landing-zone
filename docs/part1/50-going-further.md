@@ -21,9 +21,10 @@ From a compliance perspective, record all interactive operator actions with a ba
 
 In the lab, the workload is exposed through a public VPC load balancer that is attached to the workload VPC. With the following additions, you can make the solution more secure.
 
-Introduce a web application firewall in the flow in one of two ways:
+1. Create the public VPC load balancer in a separate edge VPC. Route the traffic from the edge VPC to the application that is running on the workload VPC through a private load balancer (which is routable only from within the VPC topology). This approach ensures that no direct public network flows to the workload VPC. For more information, see [Connecting from public internet](https://cloud.ibm.com/docs/framework-financial-services?topic=framework-financial-services-vpc-architecture-connectivity-workload#consumer-provider-public-internet) in "Consumer connectivity to workload VPC".
 
+2. Introduce a web application firewall in the flow in one of two ways:
 - As-a-service: Typically, you add a global load balancer, such as IBM Cloud CIS or Akamai, in front of the VPC load balancer. Then, you add a network ACL on the VPC load balancer to accept inbound traffic only from the global load balancer set of known IP addresses.
 - Hosted: You can host the application with a 3rd-party solution, such as BigIP F5. This solution is deployed and hosted on servers that you run, for example in VSIs in the landing-zone VPC topology. For a tutorial, see [Setting up a web application firewall with F5 BIG-IP](https://cloud.ibm.com/docs/framework-financial-services?topic=framework-financial-services-vpc-architecture-connectivity-waf-tutorial).
 
-Create the public VPC load balancer in a separate edge VPC. Route the traffic from the edge VPC to the application that is running on the workload VPC through a private load balancer (which is routable only from within the VPC topology). This approach ensures that no direct public network flows to the workload VPC. For more information, see [Connecting from public internet](https://cloud.ibm.com/docs/framework-financial-services?topic=framework-financial-services-vpc-architecture-connectivity-workload#consumer-provider-public-internet) in "Consumer connectivity to workload VPC".
+

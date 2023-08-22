@@ -1,6 +1,5 @@
 # Encapsulating the topology definition in a Terraform module
 
-
 ## Objective
 
 In this step, you run a Terraform module that automates the creation of the custom landing zone topology that you defined in the JSON file in the [previous step](./10-customizing.md).
@@ -53,8 +52,28 @@ To run the Terraform module in your local environment, follow these steps.
     terraform workspace new lab
     ```
 
-4.  Apply the changes.
+4.  Generate a SSH key pair. This is the key pair that will be used to ssh to the VSIs created by this execution.
 
     ```sh
-    terraform apply --var=region=eu-gb -var=ssh-key="\$(cat pub key) -var=prefix=lab-prefix
+    ssh-keygen -t rsa -b 4096 -N '' -f ./lab2-key-tf
+    ```
+
+5.  Export the IBM Cloud API key that will be used by Terraform for the execution. See [instructions](https://cloud.ibm.com/docs/account?topic=account-userapikey&interface=ui)
+    
+    ```sh
+    export TF_VAR_ibmcloud_api_key=<your API key>
+    ``` 
+
+6.  Generate a plan. The plan lists of resources that are going to be created.
+
+    ```sh
+    terraform plan --var=region=eu-gb -var=ssh-key="$(cat ./lab2-key-tf)" -var=prefix=lab-prefix
+    ```
+
+7.  (Optional) Apply the changes
+
+    This step might take up to 15 minutes to complete. You can skip it if you're short on time. The automation is run through the catalog onboarding in a later step of this lab.
+
+    ```sh
+    terraform apply --var=region=eu-gb -var=ssh-key="$(cat ./lab2-key-tf)" -var=prefix=lab-prefix
     ```

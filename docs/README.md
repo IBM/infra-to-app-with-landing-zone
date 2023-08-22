@@ -14,9 +14,9 @@ The lab also introduces some concepts and background to help you to better get t
 
 ## Lab structure
 
-The lab has two parts. The first part is a stepping stone to the second part.
+Two labs are available. The two labs are independent. However, the first lab is a stepping stone in term of knowledge to the second lab.
 
-In [part 1](./part1/00-objectives), you take the perspective of a cloud infrastructure engineer:
+In [Lab 1](./part1/00-objectives), you take the perspective of a cloud infrastructure engineer:
 
 1. Use the [landing zone deployable architecture](https://cloud.ibm.com/docs/secure-infrastructure-vpc?topic=secure-infrastructure-vpc-overview) to automatically deploy a secure VPC-based topology in an IBM Cloud account.
 2. Manually customize the deployed infrastructure in the account in the following ways:
@@ -24,7 +24,7 @@ In [part 1](./part1/00-objectives), you take the perspective of a cloud infrastr
     b. Install an Apache server in one of the workload VPCs that serves the web pages.
     c. Expose the web pages that are served by the Apache server through a public VPC load balancer.
 
-In [part 2](./part2/00-objectives), you are a DevOps/automation engineer:
+In [Lab 2](./part2/00-objectives), you are a DevOps/automation engineer:
 
-1. Automate the manual steps in part 1.
+1. Automate all the manual steps in lab 1.
 2. Package, and share the automation with other users as a **Deployable architecture** through a private IBM Cloud catalog. This packaging in a private catalog helps specific users to find and consume your automation.
