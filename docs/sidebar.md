@@ -1,4 +1,4 @@
-- [🌐 Introduction](README.md)
+- 🌐 Introduction
   - [🏢 IBM Cloud for Financial Services](./about/10-fs-cloud.md)
   - [🌍 VPC landing zone](./about/20-vpc-landing-zone.md)
   - [🏗️ Deployable architectures](./about/30-deployable-arch)
