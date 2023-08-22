@@ -1,4 +1,4 @@
-# Deploying the Landing Zone VSI pattern through IBM Cloud projects
+# Deploying the landing zone VSI pattern through IBM Cloud projects
 
 1. On your computer, create an SSH key pair by issuing the following command:
 
@@ -31,7 +31,7 @@
 
     1. Click **Review deployment options** on the lower right.
     1. Click **Add to project**.
-    1. In **Create New**, enter a name for the project. For example, "\<your initials\> Landing Zone Lab". You can leave the other information as is.
+    1. In **Create New**, enter a name for the project. For example, "\<your initials> landing zone lab". You can leave the other information as is.
     1. Click **Add** on the lower right.
 
 1. Configure the project

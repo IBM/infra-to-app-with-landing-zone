@@ -12,10 +12,10 @@ In other words, a user can run the Terraform automation behind a deployable arch
 
 ![Deployable architecture console](../images/about-deployable-arch.png)
 
-The Landing Zone Terraform module and patterns that are described in [🌍 VPC Landing Zone](./about/20-vpc-landing-zone.md) have a corresponding [deployable architecture](https://cloud.ibm.com/docs/secure-infrastructure-vpc?topic=secure-infrastructure-vpc-overview) in IBM Cloud. To help you learn about deployable architectures, this lab provides steps for the deployable architecture in IBM Cloud rather than by running Terraform commands against the open source GitHub version.
+The landing zone Terraform module and patterns that are described in [🌍 VPC landing zone](./about/20-vpc-landing-zone.md) have a corresponding [deployable architecture](https://cloud.ibm.com/docs/secure-infrastructure-vpc?topic=secure-infrastructure-vpc-overview) in IBM Cloud. To help you learn about deployable architectures, this lab provides steps for deploying the deployable architecture in IBM Cloud rather than by running Terraform commands against the open source GitHub version.
 
-IBM-maintained deployable architectures are just like the Landing Zone deployable architecture in these ways:
+IBM-maintained deployable architectures are just like the landing zone deployable architecture in these ways:
 
 - Provide the same level of customer support as any other IBM Cloud product
-- [Come with extensive documentation](https://cloud.ibm.com/docs/secure-infrastructure-vpc?topic=secure-infrastructure-vpc-overview)
-- Are maintained to be current over time
+- Come with extensive [documentation](https://cloud.ibm.com/docs/secure-infrastructure-vpc?topic=secure-infrastructure-vpc-overview)
+- Are maintained to stay current

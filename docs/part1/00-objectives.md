@@ -1,8 +1,8 @@
-# Part 1: End-to-end deployment of a sample web application on a secure VPC topology
+# Lab 1: End-to-end deployment of a sample web application on a secure VPC topology
 
-In part 1, you provision a secure VPC-based topology that is aligned with the **VSI on VPC landing zone** deployable architecture, as shown in the following diagram.
+In lab 1, you provision a secure VPC-based topology that is aligned with the **VSI on VPC landing zone** deployable architecture, as shown in the following diagram.
 
-![](https://raw.githubusercontent.com/terraform-ibm-modules/terraform-ibm-landing-zone/main/reference-architectures/vsi-vsi.drawio.svg 'size=60%' )
+![VSI on VPC landing zone architecture diagram](https://raw.githubusercontent.com/terraform-ibm-modules/terraform-ibm-landing-zone/main/reference-architectures/vsi-vsi.drawio.svg 'size=60%' )
 
 
 After you provision the VPC, you customize the deployed infrastructure in the following ways:
@@ -23,7 +23,7 @@ Make sure that you meet the following prerequisites before you begin the lab.
     - An IBMid
     - API key with the following permissions
 
-        ?> _TODO_ review
+?> _TODO_ add permissions for API key
 
 - A development computer with the following software.
     - [Terraform](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli)

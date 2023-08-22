@@ -1,6 +1,6 @@
-# VPC Landing Zone
+# VPC landing zone
 
-IBM VPC Landing Zone (also referred to as "SLZ" for Secure Landing Zone) is [Infrastructure-As-Code](https://en.wikipedia.org/wiki/Infrastructure_as_code) automation that enables you to create a fully customizable VPC environment within a single region. The VPC Landing Zone is implemented in Terraform and automates the provisioning, configuring, and integration of several services that participate in the realization of a compliant VPC-based topology that is aligned with the documented [IBM Cloud for Financial Cloud Services Framework](./about/10-fs-cloud).
+IBM VPC landing zone (also referred to as "SLZ" for secure landing zone) is [Infrastructure-As-Code](https://en.wikipedia.org/wiki/Infrastructure_as_code) automation that enables you to create a fully customizable VPC environment within a single region. The VPC landing zone is implemented in Terraform and automates the provisioning, configuring, and integration of several services that participate in the realization of a compliant VPC-based topology that is aligned with the documented [IBM Cloud for Financial Cloud Services Framework](./about/10-fs-cloud).
 
 The automation is available as a set of [Terraform modules on GitHub](https://github.com/terraform-ibm-modules/terraform-ibm-landing-zone). The automation creates and configures all of the resources necessary to create a secure and compliant topology:
 - A resource group for cloud services and for each VPC
@@ -12,10 +12,10 @@ The automation is available as a set of [Terraform modules on GitHub](https://gi
 - Virtual Private Endpoint (VPE) for Cloud Object Storage in each VPC
 - A VPN gateway in the management VPC
 
-# Landing Zone patterns
+# Landing zone patterns
 
 
-VPC Landing Zone comes with four fully functional patterns that follow the IBM Cloud Framework for Financial Services reference architecture:
+VPC landing zone comes with four fully functional patterns that follow the IBM Cloud Framework for Financial Services reference architecture:
 
 - VPC pattern
 - VPC with Virtual Servers ("VSIs") – which the lab uses.
