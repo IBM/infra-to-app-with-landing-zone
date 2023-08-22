@@ -145,7 +145,11 @@ In the **Add deployable architecture details** section, you can add architecture
 
 1.  In the **Edit readme** pane, leave the readme file as is.
 
-    By default, the `readme.md` file that is packaged in the version is displayed to users. In this step, you can change the content that is displayed. Changing the content of the readme file is useful when the deployable architecture does not have access to make modifications directly to the readme file, when no readme file exists, or when the details of the deployable architecture are different in the IBM Cloud deployable architecture integration.
+    By default, the `readme.md` file that is packaged in the version is displayed to users. In this step, you can change the content that is displayed. Changing the content of the readme file is useful in several situations. For example,
+
+    - When the deployable architecture does not have access to make modifications directly to the readme file.
+    - When no readme file exists.
+    - When the details of the deployable architecture are different in the IBM Cloud deployable architecture integration.
 
 ### Validating the version
 

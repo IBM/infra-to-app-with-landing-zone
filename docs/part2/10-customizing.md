@@ -9,7 +9,7 @@ In a nutshell, you can customize the topology in two ways:
 - By using Terraform input variables.
 
     The module accepts more than 70 input variables that you can use to tweak the VPC topology. Consider the input variables as "knobs" that you can turn to adjust the topology.
-- By using a JSON file, named `override.json`
+- By passing a JSON string value to the `override.json` variable.
 
     The override file enables deeper and broader types of customizations. By using a JSON file, you can fully customize aspects of the topology beyond what you can achieve with Terraform input variables.
 
