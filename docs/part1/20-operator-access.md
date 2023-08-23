@@ -27,24 +27,25 @@ Complete the following steps to enable public SSH access to one of the VSI in th
 
     ![Floating IP address](../images/part-1/20-floating-ip.png)
 
-5. In the [Security Groups for VPC](https://cloud.ibm.com/vpc-ext/network/securityGroups), click the one labeled `<your_initials>-management`.
-6. Go to the Rules section and allow port 22 for inbound by clicking **Create** in the _Inbound rules_ section.
+5. Click **Save**.
+6. In the [Security Groups for VPC](https://cloud.ibm.com/vpc-ext/network/securityGroups), click the one labeled `<your_initials>-management`.
+7. Go to the Rules section and allow port 22 for SSH inbound access by clicking **Create** in the _Inbound rules_ section.
 
     :information_source: **Tip**: Security groups are stateful so you don’t need to add a corresponding outbound rule.
 
     ![Allow SSH in Security group](../images/part-1/20-ssh-sg.png)
 
-7. Click **Create**.
-8. In the [Access control lists for VPC](https://cloud.ibm.com/vpc-ext/network/acl), click the one labeled `<your_initials>-management-acl`.
-9. Create the following ACL inbound rule:
+8. Click **Create**.
+9. In the [Access control lists for VPC](https://cloud.ibm.com/vpc-ext/network/acl), click the one labeled `<your_initials>-management-acl`.
+10. Create the following ACL inbound rule for SSH access:
 
     ![SSH ACL Inbound rule](../images/part-1/20-ssh-acl-inbound.png)
 
-10. Create the following ACL outbound rule:
+11. Create the following ACL outbound rule for SSH access:
 
     ![SSH ACL Outbound rule](../images/part-1/20-ssh-acl-outbound.png)
 
-11. You can now access the 'jump-box' through the public floating IP address that you provisioned earlier. On your computer, issue the following command from the terminal or command window:
+12. You can now access the 'jump-box' through the public floating IP address that you provisioned earlier. On your computer, issue the following command from the terminal or command window:
 
     ```sh
     ssh -i ./lab-key root@<Floating IP of Virtual server instance>

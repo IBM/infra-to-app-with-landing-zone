@@ -63,6 +63,7 @@
 1. While you wait for the deployment to finish, consider doing these things:
 
     - Look at the deployment logs:
+        - The Terraform init step initializes the Terraform configuration files for use with Terraform.
         - The Terraform plan steps show the list of resources that are going to be created.
         - The Terraform apply steps shows the resources that are being created.
 

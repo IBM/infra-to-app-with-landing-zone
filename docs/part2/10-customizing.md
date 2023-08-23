@@ -1,6 +1,6 @@
 # Customizing the landing zone topology
 
-## Two ways to customize
+## Ways to customize
 
 The landing zone module is designed to enable both lightweight and deep customizations of the VPC topology, including all the services that are deployed to make the VPC topology compliant.
 
@@ -9,9 +9,9 @@ In a nutshell, you can customize the topology in two ways:
 - By using Terraform input variables.
 
     The module accepts more than 70 input variables that you can use to tweak the VPC topology. Consider the input variables as "knobs" that you can turn to adjust the topology.
-- By passing a JSON string value to the `override.json` variable.
+- By passing a JSON string value to the file `override.json` or through the module variable `override_json_string`.
 
-    The override file enables deeper and broader types of customizations. By using a JSON file, you can fully customize aspects of the topology beyond what you can achieve with Terraform input variables.
+    The override enables deeper and broader types of customizations. By using a JSON definition, you can fully customize aspects of the topology beyond what you can achieve with Terraform input variables.
 
 ## Defining our custom topology with a JSON definition
 

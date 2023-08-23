@@ -19,11 +19,11 @@ You can find the code for this step in the [custom-slz](https://github.com/IBM/i
     Notice these two settings in the `main.tf` file:
 
     - The `override_json_string` input variable takes the full JSON definition. In this example, the JSON that is passed to the module through the `templatefile` function first to 'inject' the prefix. That process is done to ensure uniqueness of the resource group names in the account, as mentioned in the first item.
-    - The `source` is set to the standard VSI pattern and points to the version 4.4.7 (the most recent version at the time that this lab was written).
+    - The `source` is set to the standard VSI pattern and points to the version 4.5.4 (the most recent version at the time that this lab was written).
 
     ```hcl
     module "landing_zone" {
-      source           = "git::https://github.com/terraform-ibm-modules/terraform-ibm-landing-zone.git//patterns/vsi?ref=v4.4.7"
+      source           = "git::https://github.com/terraform-ibm-modules/terraform-ibm-landing-zone.git//patterns/vsi?ref=v4.5.4"
       prefix           = var.prefix
       region           = var.region
       ibmcloud_api_key = var.ibmcloud_api_key
@@ -67,7 +67,7 @@ To run the Terraform module in your local environment, follow these steps.
 6.  Generate a plan. The plan lists of resources that are going to be created.
 
     ```sh
-    terraform plan --var=region=eu-gb -var=ssh-key="$(cat ./lab2-key-tf)" -var=prefix=lab-prefix
+    terraform plan --var=region=eu-gb -var=ssh_key="$(cat ./lab2-key-tf.pub)" -var=prefix=lab-prefix
     ```
 
 7.  (Optional) Apply the changes.
@@ -75,5 +75,5 @@ To run the Terraform module in your local environment, follow these steps.
     This step might take up to 15 minutes to complete. You can skip it if you're short on time. The automation is run through the catalog onboarding in a later step of this lab.
 
     ```sh
-    terraform apply --var=region=eu-gb -var=ssh-key="$(cat ./lab2-key-tf)" -var=prefix=lab-prefix
+    terraform apply --var=region=eu-gb -var=ssh_key="$(cat ./lab2-key-tf.pub)" -var=prefix=lab-prefix
     ```
