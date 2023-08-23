@@ -1,7 +1,7 @@
-# Lab 2: Automating deployment, and sharing through a private IBM Cloud Catalog
+# Lab 2: Automating deployment and sharing through a private catalog
 
-Lab 1 shows how you can leverage existing landing-zone automation to deploy most of the topology, and then customize and deploy on top of that infrastructure.
+In lab 1, you deployed most of the landing zone topology, and then customized the infrastructure.
 
-The purpose of lab 2 is to show of the manual steps in lab 1 can be fully automated. Lab 2 will also show how the fully automated custom solution can be shared with other users in your enterprise through the [IBM Cloud Catalog](https://cloud.ibm.com/catalog).
+Now in lab 2, you use automation to accomplish what you did manually in lab 1. Lab 2 also demonstrates how you can share the fully automated custom solution with other users in your enterprise through the [IBM Cloud catalog](https://cloud.ibm.com/catalog).
 
 Lab 2 assumes a basic knowledge of [Terraform](https://www.ibm.com/topics/terraform).

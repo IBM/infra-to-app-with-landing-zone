@@ -1,46 +1,27 @@
-# Going further...
+# Going further
 
 ## Automating onboarding of new versions to catalog
 
-This lab focuses on onboarding the deployable architecture through the
-IBM Cloud Catalog UI as a learning exercise.
+This lab focuses on onboarding the deployable architecture through the IBM Cloud catalog UI as a learning exercise.
 
-In order to scale, especially to support the full lifecycle as new
-versions of the deployable architecture are produced, it is common to
-automate the catalog onboarding steps as opposed to going through the
-UI.
+It can be tedious to use the catalog UI to support the lifecycle of several deployable architectures as new versions are produced. You can automate the catalog onboarding steps with these starter scripts in the accompanying Git repository. The scripts build a pipeline that pushes new versions of a deployable architecture from GitHub or GitLab to the IBM Cloud catalog and trigger the catalog validation. The starter scripts are use GitHub actions and the tekton toolchain and are available at
 
-The accompanying git repository contains starter scripts that can be
-leveraged to build a pipeline that automatically pushes new version of a
-deployable architecture from GitHub or GitLab to the IBM Cloud Catalog
--- inclusive of triggering all of the validation steps. The starter kits
-are provided as GitHub action and tekton toolchain located at \[TODO:
-add link to automation folder in our repo \]
+?> _TODO_ add link to automation folder in our repo
 
-## Leveraging curated building blocks for your Deployable Architecture
+## Using curated building blocks for your deployable architecture
 
-The public organization <https://github.com/terraform-ibm-modules>
-contains curated terraform modules that can be used as base building
-blocks in your solution to provision and configure some of the most
-common IBM Cloud service. The modules are designed to cover the most
-common uses cases, as well as providing guidance and pre-wired
-secure-by-default configuration (typically under the profiles/fscloud
-directory in each module repository).
+The [IBM Cloud Terraform modules](https://github.com/terraform-ibm-modules) GitHub organization contains curated Terraform modules that you can use as building blocks in your solution to provision and configure some of the most common IBM Cloud services. The modules are designed to cover the most common uses cases and provide guidance and secure-by-default configurations (typically in the `profiles/fscloud` directory of the module).
 
-See in particular this list \[TODO -- add link\] which contains the
-modules that are actively maintained, supported and kept current by the
-IBM Cloud development organization.
+The following list contains the modules that are actively maintained, supported, and kept current by IBM Cloud.
 
-Whenever you have a need to create some IBM Cloud services in your
-solution, strongly consider using the curated modules as opposed to the
-IBM Cloud terraform provider resources directly. The modules are higher
-level, and will make you gain time, while getting the assurance that the
-configuration is tested and maintained by IBM.
+?> _TODO_ add link
+
+If you need to create some IBM Cloud services in your solution, consider using these curated modules rather than coding against the IBM Cloud Terraform provider resources directly. The modules are higher level and can save you time, and they provide assurance that the configuration is tested and maintained by IBM.
 
 ## Best practices to implement deployable architectures
 
-Recommendations and best practices to implement quality terraform modules is available on the [terraform-ibm-modules](https://terraform-ibm-modules.github.io/documentation/#/implementation-guidelines) organization. A module template is also available [here](https://github.com/terraform-ibm-modules/terraform-ibm-module-template) that can be used to quickly get started with best practices.
+For recommendations and best practices about implementing quality Terraform modules, see the [terraform-ibm-modules](https://terraform-ibm-modules.github.io/documentation/#/implementation-guidelines) documentation. A [module template](https://github.com/terraform-ibm-modules/terraform-ibm-module-template) is also available that you can use to get started quickly creating your own module.
 
-## Making a Deployable Architecture available in the IBM Cloud public catalog.
+## Making a deployable architecture available in the IBM Cloud public catalog.
 
-If you are a partner or vendor interested in making available a Deployable Architecture to all users in the Public IBM Cloud Catalog - see the following [details](https://cloud.ibm.com/docs/sell?topic=sell-selling-clouds). 
+If you are a partner or vendor that is interested in making a deployable architecture available in the public IBM Cloud catalog, see [Selling on IBM Cloud](https://cloud.ibm.com/docs/sell?topic=sell-selling-clouds).
