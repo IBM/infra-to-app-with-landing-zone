@@ -12,7 +12,7 @@ We configure the remote-exec provisioner to run a script that installs the Apach
 
 ## Execute the Apache deployment logic 
 
-You can find the code for this step in the [app-install](https://github.com/IBM/infra-to-app-with-landing-zone/tree/main/app-install) directory. The directory contains the important files:
+You can find the code for this step in the [app-install](https://github.com/IBM/infra-to-app-with-landing-zone/tree/main/app-install) directory. The directory contains the following important files:
 
 - The [main.tf](https://github.com/IBM/infra-to-app-with-landing-zone/blob/main/app-install/main.tf) file which contains the terraform logic calling the remote-exec provisioner with the ‘right’ parameters.
    
@@ -45,7 +45,7 @@ You can find the code for this step in the [app-install](https://github.com/IBM/
 
 To run the Terraform module in your local environment, follow these steps.
 
-1.  Clone the repository locally with the following Git command.  Skip this step if done in the [Executing the landing zone with a JSON definition](#/./part2/20-custom-module?id=executing-the-landing-zone-with-a-json-definition):
+1.  Clone the repository locally with the following Git command, unless you cloned it in the previous step ([Executing the landing zone with a JSON definition](#/./part2/20-custom-module?id=executing-the-landing-zone-with-a-json-definition)):
 
     ```sh
     git clone https://github.com/IBM/infra-to-app-with-landing-zone
