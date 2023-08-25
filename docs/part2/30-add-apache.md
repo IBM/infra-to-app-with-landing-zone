@@ -43,46 +43,32 @@ You can find the code for this step in the [app-install](https://github.com/IBM/
     }
     ```
 
-To run the Terraform module in your local environment, follow these steps.
+To run the Terraform module in your local environment, follow these steps.  These steps assume you ran the steps in ([Executing the landing zone with a JSON definition](./part2/20-custom-module)).
 
-1.  Clone the repository locally with the following Git command, unless you cloned it in the previous step ([Executing the landing zone with a JSON definition](#/./part2/20-custom-module?id=executing-the-landing-zone-with-a-json-definition)):
+1.  Change to the `app-install` folder
 
     ```sh
-    git clone https://github.com/IBM/infra-to-app-with-landing-zone
+    cd infra-to-app-with-landing-zone/app-install
     ```
 
-2.  Change to the `app-install` folder
+2.  Initialize Terraform.
 
     ```sh
-    cd infra-to-app-with-slz/app-install
+    terraform init
     ```
 
-3.  Create a Terraform workspace. Replace `lab` with your own name in the following command.
+3.  Generate a plan. The plan lists of resources that are going to be created.
 
     ```sh
-    terraform workspace new lab
+    terraform plan -var=region=eu-gb -var=ssh_private_key="$(cat ../custom-slz/lab2-key-tf)" -var=floating_ip_address=<The floating point IP address of the jump box> -var=vpc_id=<ID of the workload VPC>
     ```
 
-    Note: If you receive the error `Workspace "..." already exists`, issue the command:
-    
-    ```sh
-    terraform workspace select lab
-    ```
+    :information_source: **Note**:  
+      - `The floating point IP address of the jump box` value can be retrieved by accessing the [virtual server instances for VPC](https://cloud.ibm.com/vpc-ext/compute/vs) in the console.  Please make sure the corresponding region that you provisioned your resources is selected in the dropdown.
+      - `ID of the workload VPC` value can be retrieved by accessing the workload VPC in the [Virtual private clouds](https://cloud.ibm.com/vpc-ext/network/vpcs) list in the console.  Please make sure the corresponding region that you provisioned your resources is selected in the dropdown.
 
-4.  Export the IBM Cloud API key that the Terraform will use for the execution. For instructions, see [Managing user API keys](https://cloud.ibm.com/docs/account?topic=account-userapikey&interface=ui).
+4.  (Optional) Apply the changes.
 
     ```sh
-    export TF_VAR_ibmcloud_api_key=<your API key>
-    ```
-
-6.  Generate a plan. The plan lists of resources that are going to be created.
-
-    ```sh
-    terraform plan --var=region=eu-gb -var=ssh_private_key="$(cat ./lab2-key-tf)" -var=floating_ip_address=<The floating point IP address of the jump box> -var=vpc_id=<ID of the workload VPC>
-    ```
-
-7.  (Optional) Apply the changes.
-
-    ```sh
-    terraform apply --var=region=eu-gb -var=ssh_private_key="$(cat ./lab2-key-tf)" -var=floating_ip_address=<The floating point IP address of the jump box> -var=vpc_id=<ID of the workload VPC>
+    terraform apply -var=region=eu-gb -var=ssh_private_key="$(cat ./lab2-key-tf)" -var=floating_ip_address=<The floating point IP address of the jump box> -var=vpc_id=<ID of the workload VPC>
     ```

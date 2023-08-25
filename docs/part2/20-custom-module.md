@@ -43,7 +43,7 @@ To run the Terraform module in your local environment, follow these steps.
 2.  Change to the `custom-slz` folder
 
     ```sh
-    cd infra-to-app-with-slz/custom-slz
+    cd infra-to-app-with-landing-zone/custom-slz
     ```
 
 3.  Create a Terraform workspace. Replace `lab` with your own name in the following command.
@@ -64,16 +64,22 @@ To run the Terraform module in your local environment, follow these steps.
     export TF_VAR_ibmcloud_api_key=<your API key>
     ```
 
-6.  Generate a plan. The plan lists of resources that are going to be created.
+6.  Initialize Terraform.
 
     ```sh
-    terraform plan --var=region=eu-gb -var=ssh_key="$(cat ./lab2-key-tf.pub)" -var=prefix=lab-prefix
+    terraform init
     ```
 
-7.  (Optional) Apply the changes.
+7.  Generate a plan. The plan lists of resources that are going to be created.
+
+    ```sh
+    terraform plan -var=region=eu-gb -var=ssh_key="$(cat ./lab2-key-tf.pub)" -var=prefix=lab-prefix
+    ```
+
+8.  (Optional) Apply the changes.
 
     This step might take up to 15 minutes to complete. You can skip it if you're short on time. The automation is run through the catalog onboarding in a later step of this lab.
 
     ```sh
-    terraform apply --var=region=eu-gb -var=ssh_key="$(cat ./lab2-key-tf.pub)" -var=prefix=lab-prefix
+    terraform apply -var=region=eu-gb -var=ssh_key="$(cat ./lab2-key-tf.pub)" -var=prefix=lab-prefix
     ```
