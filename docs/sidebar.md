@@ -3,6 +3,7 @@
   - [🌍 VPC Landing Zone](./about/20-vpc-landing-zone.md)
   - [🏗️ Deployable architectures](./about/30-deployable-arch)
   - [📚 IBM Cloud projects](./about/40-projects.md)
+- [📂 Lab Prerequisites](./prereqs.md)
 - [📂 Lab 1 - End-to-end deployment](./part1/00-objectives.md)
   - [🚀 Deploy the landing zone VSI pattern](./part1/10-project.md)
   - [👤 Operator Access](./part1/20-operator-access.md)
