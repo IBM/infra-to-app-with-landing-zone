@@ -12,11 +12,11 @@ We configure the remote-exec provisioner to run a script that installs the Apach
 
 ## Execute the Apache deployment logic 
 
-You can find the code for this step in the [app-install](https://github.com/IBM/infra-to-app-with-landing-zone/tree/main/app-install) directory. The directory contains the following important files:
+You can find the code for this step in the [lab/step2](https://github.com/IBM/infra-to-app-with-landing-zone/tree/main/lab/step2) directory. The directory contains the following important files:
 
-- The [main.tf](https://github.com/IBM/infra-to-app-with-landing-zone/blob/main/app-install/main.tf) file which contains the terraform logic calling the remote-exec provisioner with the ‘right’ parameters.
+- The [apache.tf](https://github.com/IBM/infra-to-app-with-landing-zone/blob/main/lab/step2/apache.tf) file which contains the terraform logic calling the remote-exec provisioner with the 'right' parameters.
    
-    Notice the following settings in the `main.tf` file:
+    Notice the following settings in the `apache.tf` file:
 
     - In the connection block, the `bastion_host` is set to the management server floating IP address that you will use as a jump host to connect to the workload server.
     - In the connection block, the `host` is set to the IP address of the workload server.
@@ -45,10 +45,11 @@ You can find the code for this step in the [app-install](https://github.com/IBM/
 
 To run the Terraform module in your local environment, follow these steps.  These steps assume you ran the steps in ([Executing the landing zone with a JSON definition](./part2/20-custom-module)).
 
-1.  Change to the `app-install` folder
+1.  Copy the apache.tf file from the lab/step2 directory to the `custom-slz` folder
 
     ```sh
-    cd infra-to-app-with-landing-zone/app-install
+    cd ~/infra-to-app-with-landing-zone/
+    cp lab/step2/apache.tf custom-slz
     ```
 
 2.  Initialize Terraform.
@@ -57,18 +58,20 @@ To run the Terraform module in your local environment, follow these steps.  Thes
     terraform init
     ```
 
-3.  Generate a plan. The plan lists of resources that are going to be created.
+3.  Generate a plan. The plan lists of resources that are going to be created. 
+    - If you ran the optional `terraform apply` step in [Executing the landing zone with a JSON definition](./part2/20-custom-module), then the plan shows only the new resources related to the creation of the Apache server.
+    - Otherwise, the plan shows the all of the resources related to the creation of the infrastructure in additional to the resources related to the Apache server.
 
-    ```sh
-    terraform plan -var=region=eu-gb -var=ssh_private_key="$(cat ../custom-slz/lab2-key-tf)" -var=floating_ip_address=<The floating point IP address of the jump box> -var=vpc_id=<ID of the workload VPC>
-    ```
+  ```sh
+  terraform plan -var=region=eu-gb -var=ssh_private_key="$(cat ./lab2-key-tf)"
+  ```
 
-    :information_source: **Note**:  
-      - `The floating point IP address of the jump box` value can be retrieved by accessing the [virtual server instances for VPC](https://cloud.ibm.com/vpc-ext/compute/vs) in the console.  Please make sure the corresponding region that you provisioned your resources is selected in the dropdown.
-      - `ID of the workload VPC` value can be retrieved by accessing the workload VPC in the [Virtual private clouds](https://cloud.ibm.com/vpc-ext/network/vpcs) list in the console.  Please make sure the corresponding region that you provisioned your resources is selected in the dropdown.
+
 
 4.  (Optional) Apply the changes.
 
-    ```sh
-    terraform apply -var=region=eu-gb -var=ssh_private_key="$(cat ./lab2-key-tf)" -var=floating_ip_address=<The floating point IP address of the jump box> -var=vpc_id=<ID of the workload VPC>
-    ```
+This step might take up to 15 minutes to complete. You can skip it if you’re short on time. The automation is run through the catalog onboarding in a later step of this lab.
+
+  ```sh
+  terraform apply -var=region=eu-gb -var=ssh_private_key="$(cat ./lab2-key-tf)"
+  ```

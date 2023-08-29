@@ -37,6 +37,7 @@ To run the Terraform module in your local environment, follow these steps.
 1.  Clone the repository locally with the following Git command:
 
     ```sh
+    cd ~
     git clone https://github.com/IBM/infra-to-app-with-landing-zone
     ```
 
