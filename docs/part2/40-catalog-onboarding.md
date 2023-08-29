@@ -22,7 +22,7 @@ The result is a **secure webapp** tile in the IBM Cloud catalog that guides user
     - Product type: **Deployable architecture**.
     - Delivery method: **Terraform**.
     - Repository type: **Public repository**.
-    - Source URL: `https://github.com/IBM/infra-to-app-with-landing-zone/releases/tag/1.0.0`.
+    - Source URL: `https://github.com/IBM/infra-to-app-with-landing-zone/archive/refs/tags/1.0.0.tar.gz`.
 
         This URL links to the `tar.gz` asset file that is located in the [GitHub release page](https://github.com/IBM/infra-to-app-with-landing-zone/releases/tag/1.0.0).
     - Variation: **Standard**.
@@ -56,8 +56,7 @@ In the next few steps, you edit the information that applies to the version.
         ![](../images/part-2/8189e32b5ed54528a3fe0cd0ab18af214555cc7d.png)
 
 1.  The **Configure version** pane is displayed:
-        ![](../images/part-2/media/image24.png)
-
+    ![](../images/part-2/media/image24.png)
     1.  Review the details in **Step 1 - Review the version details**. Click **Next**.
     1.  In **Step 2**, you can configure both the Terraform runtime version to run this version of the deployable architecture and the Terraform input and output variables that are displayed to users in IBM Cloud projects.
 
@@ -89,9 +88,6 @@ In the next few steps, you edit the information that applies to the version.
         1.  In the **Details** section, change the type from string to *VPC Region*
 
             ![](../images/part-2/520e1108848d01be4e7f9a8b40b36435dcecaa02.png)
-        1.  Complete the same steps to set the `ssh_key` variable type to type `VPC SSH Key`.
-
-            TODO: double check. Probably does not apply.
 
         Compare your entries against the following screenshot.
 
@@ -125,7 +121,7 @@ In the **Add deployable architecture details** section, you can add architecture
 
     1.  Follow the steps to add an architecture diagram.
 
-        The repository for this lab contains an architecture diagram at TODO
+        The repository for this lab contains an architecture diagram at https://github.com/IBM/infra-to-app-with-landing-zone/blob/main/vpc.drawio.svg
 
         ![](../images/part-2/ee8a02736dedaaec38f6826ef5e454765563da63.png)
 
@@ -155,24 +151,29 @@ In the **Add deployable architecture details** section, you can add architecture
 
 Before the deployable architecture is published to others to see, it is validated. The validation process attempts to execute the Terraform module in a IBM Cloud Schematics workspace at least one time successfully.
 
-1.  In the **Step 1 - Configure Schematics workspace ** pane, leave the existing values as is and click **Next**.
+1.  In the **Step 1 - Configure Schematics workspace** pane, leave the existing values as is and click **Next**.
 
     ![](../images/part-2/708ba95b2a76860568ee6d085b47d4d7777d748b.png)
 
+1.  Generate an SSH key pair. This key pair is used to ssh to the VSIs created by this execution.
+
+    ```sh
+    ssh-keygen -t rsa -b 4096 -N '' -f ./lab2-catalog-key
+    ```
+
 1.  In **Step 2 - Input variable**, specify the following parameters:
+    - `ibmcloud_api_key`: Input the API key that was provided to you
+    - `region`: Set to eu-gb
+    - `ssh_key`: Copy and paste the SSH key that was generated in previous step (content of `lab2-catalog-key.pub`).
+    - `ssh_private_key`: Copy and paste the private key that was generated in previous step (content of `lab2-catalog-key`) in the [heredoc format](https://en.wikipedia.org/wiki/Here_document). You should end up with a string looking like:
 
-       - `ibmcloud_api_key`: Input the API key that was provided to you
-       - `region`: Set to eu-gb
-       - `ssh_key`: Copy and paste the SSH key that was imported in lab 1. TODO: probably need to generate a new key here to avoid clash
-       - `ssh_private_key`: Copy and paste the private key that you created in lab 1 in the [heredoc format](https://en.wikipedia.org/wiki/Here_document).
-
-            ```text
-            <<EOT
-            -----BEGIN OPENSSH PRIVATE KEY-----
-            < private key in base 64 >
-            -----END OPENSSH PRIVATE KEY-----
-            EOT
-            ```
+        ```text
+        <<EOT
+        -----BEGIN OPENSSH PRIVATE KEY-----
+        < private key in base 64 >
+        -----END OPENSSH PRIVATE KEY-----
+        EOT
+        ```
 
 1.  In **Step 3 - Validate version**, click **Validate**.
 
