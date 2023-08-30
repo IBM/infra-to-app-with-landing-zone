@@ -26,6 +26,7 @@ resource "null_resource" "application-install" {
 
   provisioner "remote-exec" {
     inline = [
+      "apt-get update",
       "apt-get install apache2 -y"
     ]
   }

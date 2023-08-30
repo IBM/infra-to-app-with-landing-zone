@@ -1,21 +1,21 @@
-# Deployable Architecture
+# Deployable architecture
 
-“Deployable Architecture” is officially defined as “Cloud automation for deploying a common architectural pattern that combines one or more cloud resources that is designed for easy deployment, scalability, and modularity.”
+A deployable architecture is defined as "Cloud automation for deploying a common architectural pattern that combines one or more cloud resources that is designed for easy deployment, scalability, and modularity.
 
-More specifically, and concretely, from a technical perspective, “Deployable Architectures” are essentially terraform modules that are fully integrated into the IBM Cloud experience. Deployable Architecture are:
+From a technical perspective, deployable architectures are essentially Terraform modules that are fully integrated into the IBM Cloud experience. Deployable architectures have these characteristics:
 
-- Discoverable and available through the IBM Cloud Catalog (and through IBM Cloud search)
-- Fully integrated in IBM Cloud Projects and Schematics.
+- Discoverable and available through the IBM Cloud catalog (and through IBM Cloud search)
+- Fully integrated in IBM Cloud projects and Schematics
 - Integrated with [IBM Cloud Risk Analyzer](https://cloud.ibm.com/docs/code-risk-analyzer-cli-plugin?topic=code-risk-analyzer-cli-plugin-cra-cli-plugin#terraform-command)
 
-In other words, it is possible for an end-user to execute the terraform automation behind a “Deployable Architecture” just from a few clicks and inputs in the IBM Cloud console.
+In other words, a user can run the Terraform automation behind a deployable architecture just from a few clicks and inputs in the IBM Cloud console.
 
-![Deployable Architecture console](../images/about-deployable-arch.png)
+![Deployable architecture console](../images/about-deployable-arch.png)
 
-The Landing Zone terraform module and patterns described just above have a corresponding [Deployable Architecture](https://cloud.ibm.com/docs/secure-infrastructure-vpc?topic=secure-infrastructure-vpc-overview) in IBM Cloud. In this lab, the Secure Landing Zone is consumed through the Deployable Architecture experience for ease of use, rather than using the terraform CLI against the open-source github version.
+The landing zone Terraform module and patterns that are described in [🌍 VPC landing zone](./about/20-vpc-landing-zone.md) have a corresponding [deployable architecture](https://cloud.ibm.com/docs/secure-infrastructure-vpc?topic=secure-infrastructure-vpc-overview) in IBM Cloud. To help you learn about deployable architectures, this lab provides steps for deploying the deployable architecture in IBM Cloud rather than by running Terraform commands against the open source GitHub version.
 
-IBM-maintained Deployable Architectures, like the Landing Zone Deployable Architecture:
+IBM-maintained deployable architectures are just like the landing zone deployable architecture in these ways:
 
 - Provide the same level of customer support as any other IBM Cloud product
-- [Come with extensive documentation](https://cloud.ibm.com/docs/secure-infrastructure-vpc?topic=secure-infrastructure-vpc-overview)
-- Are maintained and remains current over time
+- Come with extensive [documentation](https://cloud.ibm.com/docs/secure-infrastructure-vpc?topic=secure-infrastructure-vpc-overview)
+- Are maintained to stay current

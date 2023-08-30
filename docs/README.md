@@ -1,18 +1,30 @@
-# Seamless App Deployment with IBM Cloud's Secure Landing Zone
+# Seamless Deployment: From Provisioning to Runtime With the IBM Cloud VPC landing zone
 
-With the release of IBM Cloud Deployable Architectures, it is easy to provision an exisiting pre-defined architecture or customize and import.
+The introduction of IBM Cloud [deployable architectures](https://cloud.ibm.com/docs/secure-infrastructure-vpc?topic=secure-infrastructure-vpc-faqs) makes it easy to provision predefined architecture in no time.
 
-In this hands-on lab, you will learn to:
+## 📖 What you will learn
 
-1. Create a customized VPC-based topology using the VPC Landing Zone Deployable Architecture
-2. Deploy and expose a web application on top of this secure topology. For this lab, we will use an Apache service as an example.
-3. Share this deployable pattern with your enterprise through the IBM Cloud Private Catalog
+In this hands-on lab, you will learn how to work with the VPC landing zone deployable architecture to accomplish these goals.
 
-The objective of this lab is split into two distinct parts. The first part is built as a stepping stone for the second part.
+1. Create a customized VPC-based topology from the VPC landing zone deployable architecture.
+2. Deploy and expose a web application on this secure topology. For this lab, we use an Apache service as an example.
+3. Share this deployable pattern with your enterprise through the IBM Cloud private catalog.
 
-- Part 1 shows how the end-to-end steps to deploy a sample web application on top of a secure VPC-topology in your own account.
-  - The secure VPC-based topology will be deployed using the Landing Zone Deployable Architecture.
-  - Operator access will be provided through a manually deployed jump box VSI
-  - An Apache server will be deployed in a secure VSI workload VPC
-  - The web application will be exposed for outside access.
-- Part 2 shows how to automate the manual steps in Part 1, and then, how to package, and share the automation as a “Deployable Architecture” with other user through a private IBM Cloud Catalog
+The lab also introduces some concepts and background to help you to better get the "bigger" picture at the beginning. However, the hands-on steps are designed to be independent from the concepts and background information.
+
+## Lab structure
+
+Two labs are available. The two labs are independent. However, the first lab is a stepping stone in term of knowledge to the second lab.
+
+In [Lab 1](./part1/00-objectives), you take the perspective of a cloud infrastructure engineer:
+
+1. Use the [landing zone deployable architecture](https://cloud.ibm.com/docs/secure-infrastructure-vpc?topic=secure-infrastructure-vpc-overview) to automatically deploy a secure VPC-based topology in an IBM Cloud account.
+2. Manually customize the deployed infrastructure in the account in the following ways:
+    a. Provide operator access through a "jump box" VSI.
+    b. Install an Apache server in one of the workload VPCs that serves the web pages.
+    c. Expose the web pages that are served by the Apache server through a public VPC load balancer.
+
+In [Lab 2](./part2/00-objectives), you are a DevOps/automation engineer:
+
+1. Automate all the manual steps in lab 1.
+2. Package, and share the automation with other users as a **Deployable architecture** through a private IBM Cloud catalog. This packaging in a private catalog helps specific users to find and consume your automation.
