@@ -15,7 +15,7 @@ The result is a **secure webapp** tile in the IBM Cloud catalog that guides user
 
     1.  Go to **Manage** > **Catalogs** > **[Private catalogs](https://cloud.ibm.com/content-mgmt/catalogs)** in the IBM Cloud console.
     1.  Click **Create**.
-    1.  Give the catalog a name. For example, `My deployable architectures`.
+    1.  Give the catalog a name. For example, `My deployable architectures (yourinitials)`.
     1.  Click **Create**.
 1.  Select the catalog, and then click **Add** to add a product to the new catalog offering.
 
@@ -43,6 +43,7 @@ The result is a **secure webapp** tile in the IBM Cloud catalog that guides user
 
     1.  Change the product name to one of your choice. For example, `Secure webapp`.
     1.  (Optional) You can change any other details in the tile of your private catalog. For example, you can change the icon, short description, tags, or documentation URL. A preview of the catalog tile on the right side of the page updates as you make changes.
+    1.  Click the **Save** button to persist the changes.
 
 ## Specifying initial version details
 
@@ -89,6 +90,8 @@ In the next few steps, you edit the information that applies to the version.
 
             ![](../images/part-2/520e1108848d01be4e7f9a8b40b36435dcecaa02.png)
 
+        1.  Perform the same steps to set the type of the `ssh_private_key` variable to *Multiline secure value*
+
         Compare your entries against the following screenshot.
 
         ![](../images/part-2/16ac8f7add0155eacbc958df9b14489264e9574b.png)
@@ -121,7 +124,7 @@ In the **Add deployable architecture details** section, you can add architecture
 
     1.  Follow the steps to add an architecture diagram.
 
-        The repository for this lab contains an architecture diagram at https://github.com/IBM/infra-to-app-with-landing-zone/blob/main/vpc.drawio.svg
+        The repository for this lab contains an architecture diagram. When prompted, use this url: `https://raw.githubusercontent.com/IBM/infra-to-app-with-landing-zone/cff0457a362c9b56ce805234410b678d55ebe29d/vpc.drawio.svg`
 
         ![](../images/part-2/ee8a02736dedaaec38f6826ef5e454765563da63.png)
 
@@ -135,7 +138,7 @@ In the **Add deployable architecture details** section, you can add architecture
 
 ### Updating the license agreement and readme file
 
-1.  In the **Add license agreements** pane, leave the agreements empty.
+1.  In the **Add license agreements** pane, keep the [license](https://github.com/IBM/infra-to-app-with-landing-zone/blob/main/LICENSE) that was imported automatically by IBM Cloud Catalog from the Github repository.
 
     In this step, you can identify a license agreement that users must accept before they deploy.
 
@@ -175,13 +178,20 @@ Before the deployable architecture is published to others to see, it is validate
         EOT
         ```
 
+    - `prefix` (under the **Optional input variables** section): Your initials followed by catalog. For instance `vb-catalog`.
+
 1.  In **Step 3 - Validate version**, click **Validate**.
 
     ![](../images/part-2/f35f2e7ea685311f9ff32b22d3ec33dc86a5cd7e.png)
 
-    Validation is now in progress. The IBM Cloud catalog is running the Terraform module in a Schematics workspace.
+    Validation is now in progress. The IBM Cloud catalog is running the Terraform module in a Schematics workspace. 
 
     ![](../images/part-2/fe1c405a22514718df660e8e3ce13f96060e0065.png)
+
+    Validation may take up to 25 minutes as it is going to deploy the full solution implemented in the module. While you wait for the validation to finish, consider doing these things:
+    1. Look at the deployment logs in IBM Cloud Schematics by clicking the **View logs** link
+    1. Explore some of the materials in the [introduction](README) to this lab.
+    1. Have a coffee ☕
 
     If the validation completes successfully, you see a pane that looks like the following screenshot:
 
