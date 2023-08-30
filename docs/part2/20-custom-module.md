@@ -19,11 +19,11 @@ You can find the code for this step in the [custom-slz](https://github.com/IBM/i
     Notice these two settings in the `main.tf` file:
 
     - The `override_json_string` input variable takes the full JSON definition. In this example, the JSON that is passed to the module through the `templatefile` function first to 'inject' the prefix. That process is done to ensure uniqueness of the resource group names in the account, as mentioned in the first item.
-    - The `source` is set to the standard VSI pattern and points to the version 4.5.4 (the most recent version at the time that this lab was written).
+    - The `source` is set to the standard VSI pattern and points to the version 4.6.0 (the most recent version at the time that this lab was written).
 
     ```hcl
     module "landing_zone" {
-      source           = "git::https://github.com/terraform-ibm-modules/terraform-ibm-landing-zone.git//patterns/vsi?ref=v4.5.4"
+      source           = "git::https://github.com/terraform-ibm-modules/terraform-ibm-landing-zone.git//patterns/vsi?ref=v4.6.0"
       prefix           = var.prefix
       region           = var.region
       ibmcloud_api_key = var.ibmcloud_api_key

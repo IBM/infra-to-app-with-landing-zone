@@ -35,7 +35,7 @@ The result is a **secure webapp** tile in the IBM Cloud catalog that guides user
 
         You can select a category that matches your deployable architecture. User who browses the catalog can filter by category.
 1.  Click **Add product**.
-1.  (Optional) Change the default name for your deployable:
+1.  (Optional) Change the default name for your product:
 
     1.  Click **Edit**.
 
@@ -69,7 +69,7 @@ In the next few steps, you edit the information that applies to the version.
         required_providers {
             ibm = {
             source  = "IBM-Cloud/ibm"
-            version = "1.54.0"
+            version = "1.56.1"
             }
         }
         }
@@ -128,6 +128,8 @@ In the **Add deployable architecture details** section, you can add architecture
 
         ![](../images/part-2/ee8a02736dedaaec38f6826ef5e454765563da63.png)
 
+    1.  Add a required caption and description and click **Update**.
+
 1.  In the **Step 2 - add prerequisites** pane, leave the input as blank, and click **Next**.
 
     In this step, you can identify prerequisite deployable architectures that must be deployed. However, in this lab, our module deploys the full infrastructure, and you don't need to identify other deployable architectures that are required.
@@ -165,10 +167,10 @@ Before the deployable architecture is published to others to see, it is validate
     ```
 
 1.  In **Step 2 - Input variable**, specify the following parameters:
-    - `ibmcloud_api_key`: Input the API key that was provided to you
-    - `region`: Set to eu-gb
+    - `ibmcloud_api_key`: Untoggle *Use a secret* and input the API key that you generated.
+    - `region`: Set to `eu-gb`.
     - `ssh_key`: Copy and paste the SSH key that was generated in previous step (content of `lab2-catalog-key.pub`).
-    - `ssh_private_key`: Copy and paste the private key that was generated in previous step (content of `lab2-catalog-key`) in the [heredoc format](https://en.wikipedia.org/wiki/Here_document). You should end up with a string looking like:
+    - `ssh_private_key`: Untoggle *Use a secret* and copy and paste the private key that was generated in previous step (content of `lab2-catalog-key`) in the [heredoc format](https://en.wikipedia.org/wiki/Here_document). You should end up with a string looking like:
 
         ```text
         <<EOT
