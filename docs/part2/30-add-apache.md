@@ -55,7 +55,7 @@ To run the Terraform module in your local environment, follow these steps.  Thes
 2.  Initialize Terraform.
 
     ```sh
-    terraform init
+    terraform init --upgrade
     ```
 
 3.  Generate a plan. The plan lists of resources that are going to be created. 
