@@ -8,6 +8,8 @@ Make sure that you meet the following prerequisites before you begin the lab.
 
     :information_source: **Note**:  Participants in the TechXchange lab will be provided with user credentials to access a paid IBM Cloud account for the duration of the lab.
 
+    :exclamation: **Important**: If you are an existing active user of IBM Cloud, and if you are provided with user credentials for this lab, ensure that you do not have an existing active session on [cloud.ibm.com](https://cloud.ibm.com) using your own credentials prior to accessing the provided login page. If needed, log out from your existing session (top right icon in the IBM Cloud Console -> Log out) first.
+
 2. A personal API Key associated with a user with the following permissions.
 
     :information_source: **Note**:  The user account provided in the TechXchange lab already has got the necessary permissions. Participants in the TechXchange lab only need to create an API Key as described below.
@@ -37,15 +39,13 @@ To create an API Key: \
 
 ## Development environment
 
-- A development computer with the following software.
-    - [Terraform](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli)
-    - Text editor of your choice
-    - Web browser
-    - Tools to generate SSH key
-        - Linux and Mac come with ssh-keygen.
-        - Windows users can use [PuTTYgen](https://www.ssh.com/academy/ssh/putty/windows/puttygen)
-
-        For more information, see [Generating an external SSH key](https://cloud.ibm.com/docs/vpc?topic=vpc-ssh-keys&interface=ui#generating-ssh-keys).
+A development computer with the following software:
+- [Terraform](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli)
+- Text editor of your choice
+- Web browser
+- Tools to generate SSH key
+    - Linux and Mac come with ssh-keygen.
+    - Windows users can use [PuTTYgen](https://www.ssh.com/academy/ssh/putty/windows/puttygen)
     - Optional: [IBM Cloud CLI](https://cloud.ibm.com/docs/cli?topic=cli-getting-started)
 
 :information_source: **Note**:  Participants in the TechXchange classroom will be provided with a development VM with the prerequisite software installed. You may however decide to use your own machine for convenience.
