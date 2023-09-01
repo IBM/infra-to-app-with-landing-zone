@@ -28,7 +28,7 @@ As a refresher, here's what you did in lab 1:
 
 You can create a JSON file that codifies the topology that you want in one of three ways. The following list orders the methods from least complex to most complex:
 
-- Use the [secure landing zone wizard](https://slz-gui.15z7evpngrsf.us-south.codeengine.appdomain.cloud/) to produce a valid JSON file.
+- Use the [secure landing zone wizard](https://ibm.biz/slzwizard) to produce a valid JSON file.
 
     The wizard also supports importing an existing JSON file and start from there.
 
@@ -42,4 +42,10 @@ You can create a JSON file that codifies the topology that you want in one of th
 
 ### Creating the JSON definition
 
-For this lab, use the customized JSON file at https://github.com/IBM/infra-to-app-with-landing-zone/blob/main/custom-slz/override.tftpl.
+For this lab, use the customized JSON file at https://github.com/IBM/infra-to-app-with-landing-zone/blob/main/lab/customization/override.json
+
+You may take a few moment to explore the content of the provided json definition:
+  1. Access the Wizard at <https://ibm.biz/slzwizard>. 
+  1. Click the Import JSON button and copy paste the content of the JSON definition.
+    ![](../images/part-2/override-gui.png)
+  1. After import, you can use the GUI to explore the various facet of the topology using the right-hand menu. Of particular interest in the scope of the customizations are the [VPC Access control](https://slz-gui.15z7evpngrsf.us-south.codeengine.appdomain.cloud/nacls), [Security Groups](https://slz-gui.15z7evpngrsf.us-south.codeengine.appdomain.cloud/securityGroups), and [Virtual Server Instances](https://slz-gui.15z7evpngrsf.us-south.codeengine.appdomain.cloud/vsi) sections. 
