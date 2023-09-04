@@ -37,6 +37,7 @@ You can find the code for this step in the [lab/step2](https://github.com/IBM/in
 
       provisioner "remote-exec" {
         inline = [
+          "apt-get update",
           "apt-get install apache2 -y"
         ]
       }
