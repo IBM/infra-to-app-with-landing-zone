@@ -32,7 +32,7 @@
     1. Click **Review deployment options** on the lower right.
     1. Click **Add to project**.
     1. In **Create New**, enter a name for the project. For example, "\<your initials> landing zone lab". You can leave the other information as is.
-    1. Click **Add** on the lower right.
+    1. Click **Create** on the lower right.
 
 1. Configure the project
     1. In the **Configure** > **Security** section, specify the following information: \
