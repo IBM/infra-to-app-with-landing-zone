@@ -8,8 +8,6 @@ Make sure that you meet the following prerequisites before you begin the lab.
 
     :information_source: **Note**:  Participants in the TechXchange lab will be provided with user credentials to access a paid IBM Cloud account for the duration of the lab.
 
-    :exclamation: **Important**: If you are an existing active user of IBM Cloud, and if you are provided with user credentials for this lab, ensure that you do not have an existing active session on [cloud.ibm.com](https://cloud.ibm.com) using your own credentials prior to accessing the provided login page. If needed, log out from your existing session (top right icon in the IBM Cloud Console -> Log out) first.
-
 2. A personal API Key associated with a user with the following permissions.
 
     :information_source: **Note**:  The user account provided in the TechXchange lab already has got the necessary permissions. Participants in the TechXchange lab only need to create an API Key as described below.
@@ -29,13 +27,18 @@ Make sure that you meet the following prerequisites before you begin the lab.
 
 
 To create an API Key: \
-    1. In the IBM Cloud console, go to **Manage > Access (IAM) > API keys.** \
-    2. Click **Create an IBM Cloud API key**. \
-    3. Enter a name and description for your API key. \
+    1. In the IBM Cloud console, in the navigation bar at the top of your screen, go to **Manage > Access (IAM) > API keys.** \
+    2. Click **Create +**. \
+    3. Enter a name, for example `<yourinitials> lab` and optionally a description for your API key. \
     4. Click **Create** \
-    5. Then, click **Show** to display the API key.
+    5. Then, click **Show** (the eye icon) to display the API key.
 
 :exclamation: **Important**: Please save the generated API key for later use in the labs. The API key is only available to be copied or downloaded at the time of creation. If the API key is lost, you can re-create a new API key.
+
+:information_source: **Note**:  In the TechXchange VM, you may open a text editor to paste the API Key for later use with the following terminal command:
+```sh
+gedit &
+```
 
 ## Development environment
 

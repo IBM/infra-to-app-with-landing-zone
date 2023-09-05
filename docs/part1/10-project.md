@@ -36,10 +36,16 @@
 
 1. Configure the project
     1. In the **Configure** > **Security** section, specify the following information: \
-      a. Authentication: Clear **Use a secret** and paste in your IBM Cloud API key.
+      a. Authentication: Clear **Use a secret** and paste in your IBM Cloud API key (created in the [prereqs](./prereqs) section).
 
     1. In the **Configure** > **Required** section, specify the following settings:\
         a. `ssh_public_key`: The value of the `lab-key.pub` file that you generated in step 1.\
+        :information_source: **Note**: In the TechXchange VM, you can use `cat` to view the content of the file
+        ```sh
+        cat lab-key.pub
+        ```
+        Copy and paste the **full** content including the ssh-rsa and the user name pieces - for instance: `ssh-rsa ... ibmuser@student` 
+
         b. `region`: The region that you want to deploy in. \
         c. `prefix`: Your initials.
 
