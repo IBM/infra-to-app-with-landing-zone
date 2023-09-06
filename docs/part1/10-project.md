@@ -47,7 +47,7 @@
         Copy and paste the **full** content including the ssh-rsa and the user name pieces - for instance: `ssh-rsa ... ibmuser@student` 
 
         b. `region`: The region that you want to deploy in. \
-        c. `prefix`: Your initials.
+        c. `prefix`: `<your initials>`.
 
         ![Configuration](../images/part-1/10-configuration.png)
 

@@ -2,7 +2,7 @@
 
 To keep the lab simple, you give operator access through a VSI jump-box in the management VPC. Then you expose the web application directly through a public load balancer that is attached to the worker VPC.
 
-These approaches provide a reasonable level of security, satisfy a number of compliance controls, and might be sufficient for a number of industries and enterprises. If you want more security and need to comply with different controls, consider the following information to set a more secure and compliant posture.
+These approaches may be sufficient for a number of industries and enterprises. However, if you want more security and need to comply with different controls, consider the following information to set a more secure and compliant posture.
 
 ## Other ways to provide operator access
 
@@ -12,7 +12,7 @@ Some secure options to consider for providing network connectivity to the manage
 
     ![Client-to-site VPN](../images/part-1/50-c2s.png)
 - A [site-to-site VPN](https://cloud.ibm.com/docs/vpc?topic=vpc-using-vpn) to connect the management VPC to another private network. The landing zone deployable architecture creates a site-to-site gateway for this purpose.
-- Direct LInk, which extends an organization data center network. For a starting point with more details, see [Connecting application provider to the management VPC](https://cloud.ibm.com/docs/framework-financial-services?topic=framework-financial-services-vpc-architecture-connectivity-management).
+- Direct Link, which extends an organization data center network. For a starting point with more details, see [Connecting application provider to the management VPC](https://cloud.ibm.com/docs/framework-financial-services?topic=framework-financial-services-vpc-architecture-connectivity-management).
 
 From a compliance perspective, record all interactive operator actions with a bastion solution. Operators connect through the bastion, which records all interactive session actions for auditing. For more information, see [Running operator actions through a bastion host
 ](https://cloud.ibm.com/docs/framework-financial-services?topic=framework-financial-services-vpc-architecture-connectivity-bastion) in the IBM cloud Framework for Financial Services docs. For a tutorial that uses the 3rd-party solution Teleport, see [Setting up a bastion host that uses Teleport](https://cloud.ibm.com/docs/framework-financial-services?topic=framework-financial-services-vpc-architecture-connectivity-bastion-tutorial-teleport).

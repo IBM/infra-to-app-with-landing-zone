@@ -1,6 +1,8 @@
 # Exposing the web application to the internet
 
-In this part of the lab, you expose the web pages to the internet through a VPC load balancer so that anyone can access them.
+In this part of the lab, you expose the web pages to the internet through a VPC load balancer so that anyone can access them. 
+
+The load balancer enables to distribute traffic among multiple application server instances running in the VPC (the workload VSIs), and by forwarding traffic to healthy instances only. Further details on load balancing, and the IBM Cloud Load Balancer are available in the [IBM Cloud documentation](https://cloud.ibm.com/docs/loadbalancer-service?topic=loadbalancer-service-getting-started).
 
 1.  Create a public load balancer to expose the web application.
     1. Access the [Load balancers for VPC](https://cloud.ibm.com/vpc-ext/network/loadBalancers) page.
@@ -19,6 +21,7 @@ In this part of the lab, you expose the web pages to the internet through a VPC 
         - Pool protocol: `HTTP`
         - Health Port: `80`
     - Click **Attach server +** in the Back-end pools section and add the VSI that is in the subnet `<your_initials>-workload-vsi-zone-1` with a server port of `80`.
+        - (Optional) If you deployed the Apache server on the workload VSIs 2 and 3 in [Install Apache server](/./part1/30-apache-server) , you may repeat this step to attach `<your_initials>-workload-server-2` and `<your_initials>-workload-server-3` to the back-end pool.
     - Create a front-end listener by clicking **Create listener** and set the Listener port to `80`.
     - Under the _Security Group_ section, clear all settings except the one labeled `<your_initials>-workload`.
     - Click **Create load balancer**.

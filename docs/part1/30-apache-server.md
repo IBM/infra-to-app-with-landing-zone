@@ -23,29 +23,31 @@ By default, the workload VSI (Virtual Server Instance) is locked down from the m
       ![Management SSH ACL Outbound rule](../images/part-1/30-mgmt-ssh-acl-outbound.png)
 
 1. Access the workload VSI by completing the following steps:
+
     1. Go to [Virtual server instances for VPC](https://cloud.ibm.com/vpc-ext/compute/vs). Take note of the private IP("Reserved IP") for the VSI labeled `<your_initials-workload-server-1` (`10.40.10.4` in this example). You need it later.
 
         ![Private IP](../images/part-1/30-private-ip.png)
 
-    1. From your computer, copy the private key that is labeled `lab_key`` to the Bastion host.
+    1. From your computer, copy the private key that is labeled `lab_key` to the jump-box host. 
+    The floating IP of the jump box is the public IP that you kept a note of in [Operator Access](./part1/20-operator-access)
 
         ```sh
-        scp -i lab-key lab-key root@<Floating IP address of bastion host>:/root
+        scp -i lab-key lab-key root@<Floating IP address of the jump box>:/root
         ```
 
-   1. SSH to the bastion host
+   1. SSH to the jump box host
 
       ```sh
-      ssh -i ./lab-key root@<Floating IP of Virtual server instance>
+      ssh -i ./lab-key root@<Floating IP address of the jump box>
       ```
 
    1. Change permissions of the private key
 
       ```sh
       chmod 600 lab-key
-      ```
+      ```   
 
-   1. SSH to the workload VSI
+   1. SSH to the workload VSI using the private IP noted above in step 3.1. The jump-box has got connectivity to the private IP of the workload VSI.
 
       ```sh
       ssh -i ./lab-key root@<Private IP address of the workload VSI>
