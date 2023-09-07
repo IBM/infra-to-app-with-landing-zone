@@ -37,6 +37,16 @@ resource "null_resource" "application-install" {
       "apt-get install apache2 -y"
     ]
   }
+
+  provisioner "file" {
+    content = <<EOT
+<html>
+<img src="https://raw.githubusercontent.com/IBM/infra-to-app-with-landing-zone/main/docs/header.jpg">
+<h1> You did it!! </h1>
+</html>    
+EOT
+    destination = "/var/www/html/index.html"
+  }
 }
 
 # Extra variable required to allow to connect to the workload vsis through the management vsi
