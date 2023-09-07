@@ -22,13 +22,13 @@ The result is a **secure webapp** tile in the IBM Cloud catalog that guides user
     - Product type: **Deployable architecture**.
     - Delivery method: **Terraform**.
     - Repository type: **Public repository**.
-    - Source URL: `https://github.com/IBM/infra-to-app-with-landing-zone/archive/refs/tags/1.0.0.tar.gz`.
+    - Source URL: `https://github.com/IBM/infra-to-app-with-landing-zone/archive/refs/tags/1.0.2.tar.gz`.
 
-        This URL links to the `tar.gz` asset file that is located in the [GitHub release page](https://github.com/IBM/infra-to-app-with-landing-zone/releases/tag/1.0.0).
+        This URL links to the `tar.gz` asset file that is located in the [GitHub release page](https://github.com/IBM/infra-to-app-with-landing-zone/releases/tag/1.0.2).
     - Variation: **Standard**.
 
         :bulb: **Tip:** A deployable architecture can have multiple variations for the user to choose from. For example, the VSI on VPC landing zone deployable architecture has two variations: "quick start" and "standard". In this lab, our deployable architecture has one variation. It's good practice to name this variation "Standard" - but you can use any name.
-    - Software Version: **1.0.0**.
+    - Software Version: **1.0.2**.
 
         This version is the version that is displayed to users in the catalog. The version can be any string that follows [semantic versioning conventions](https://semver.org/). It does not need to match the version in your source control management system.
     - Category: **Enterprise applications**.
@@ -52,7 +52,7 @@ In the next few steps, you edit the information that applies to the version.
 ### Configuring the version
 1.  Access the version configuration pages:
 
-    1.  In the **Version list** section, click the version that was imported (1.0.0).
+    1.  In the **Version list** section, click the version that was imported (1.0.2).
 
         ![](../images/part-2/8189e32b5ed54528a3fe0cd0ab18af214555cc7d.png)
 
@@ -221,7 +221,7 @@ Before the deployable architecture is published to others to see, it is validate
 
 To share the deployable architecture with other users in your private catalog, following these steps.
 
-1.  Go to the deployable architecture page for the Secure webapp. Make sure that state of the version 1.0.0 is marked as `Ready`.
+1.  Go to the deployable architecture page for the Secure webapp. Make sure that state of the version 1.0.2 is marked as `Ready`.
 
     ![](../images/part-2/8ede5141765f7fc8fc5d8f1c669613227075a83c.png)
 1.  Click **Actions...** and select **Share**.
