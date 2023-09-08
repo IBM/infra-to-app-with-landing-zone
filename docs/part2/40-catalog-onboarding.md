@@ -232,7 +232,7 @@ To share the deployable architecture with other users in your private catalog, f
     ![](../images/part-2/8d1be5e148980da96710b4ede30117ae9babd529.png)
 
 
-You can also share the deployable architecture with other accounts in the same [IBM Cloud enterprise](https://cloud.ibm.com/docs/secure-enterprise?topic=secure-enterprise-what-is-enterprise&interface=ui). This method is the most common way to share deployable architectures across accounts for an organization, company, or ISV.
+You can also share the deployable architecture with other accounts. This method is the most common way to share deployable architectures across accounts for an organization, company, or ISV.
 
 The secure webapp deployable architecture is available to any user in the account. Your users can find it by searching directly in the search box in the IBM Cloud header.
 
