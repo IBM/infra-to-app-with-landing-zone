@@ -24,7 +24,7 @@
 
     1. Access the [VSI on VPC landing zone Deployable Architecture](https://cloud.ibm.com/catalog/architecture/deploy-arch-ibm-slz-vsi-ef663980-4c71-4fac-af4f-4a510a9bcf68-global?catalog_query=aHR0cHM6Ly9jbG91ZC5pYm0uY29tL2NhdGFsb2cjcmVmZXJlbmNlX2FyY2hpdGVjdHVyZQ%3D%3D) in IBM Cloud.
     1. On the VSI on VPC landing zone details page, make sure that the following settings are selected:\
-        a. Product version: **Select the latest** (`4.4.7` at the time of writing).\
+        a. Product version: **Select the latest** (`4.13.3` at the time of writing).\
         b. Variation: `Standard`
 
         ![Details page](../images/part-1/10-overview-page.png)

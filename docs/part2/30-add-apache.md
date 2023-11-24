@@ -64,7 +64,7 @@ To run the Terraform module in your local environment, follow these steps.  Thes
     - Otherwise, the plan shows the all of the resources related to the creation of the infrastructure in additional to the resources related to the Apache server.
 
   ```sh
-  terraform plan -var=region=eu-gb -var=ssh_key="$(cat ./lab2-key-tf.pub) -var=ssh_private_key="$(cat ./lab2-key-tf)" -var=prefix=<your_initials>-lab2
+  terraform plan -var=region=eu-gb -var=ssh_key="$(cat ./lab2-key-tf.pub)" -var=ssh_private_key="$(cat ./lab2-key-tf)" -var=prefix=<your_initials>-lab2
   ```
 
 
@@ -74,5 +74,5 @@ To run the Terraform module in your local environment, follow these steps.  Thes
 This step might take up to 15 minutes to complete. You can skip it if you’re short on time. The automation is run through the catalog onboarding in a later step of this lab.
 
   ```sh
-  terraform apply -var=region=eu-gb -var=ssh_key="$(cat ./lab2-key-tf.pub) -var=ssh_private_key="$(cat ./lab2-key-tf)" -var=prefix=<your_initials>-lab2
+  terraform apply -var=region=eu-gb -var=ssh_key="$(cat ./lab2-key-tf.pub)" -var=ssh_private_key="$(cat ./lab2-key-tf)" -var=prefix=<your_initials>-lab2
   ```
