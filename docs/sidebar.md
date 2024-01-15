@@ -1,7 +1,7 @@
 - [🌐 Introduction](README.md)
   - [🏢 IBM Cloud for Financial Services](./about/10-fs-cloud.md)
   - [🌍 VPC Landing Zone](./about/20-vpc-landing-zone.md)
-  - [🏗️ Deployable architectures](./about/30-deployable-arch)
+  - [🏗️ Deployable architectures](./about/30-deployable-arch.md)
   - [📚 IBM Cloud projects](./about/40-projects.md)
 - [☑ Lab Prerequisites](./prereqs.md)
 - [📂 Lab 1 - End-to-end deployment](./part1/00-objectives.md)
